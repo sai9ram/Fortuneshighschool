@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions 2026-27 | Fortunes High School Hyderabad</title>
+    <meta name="description"
+        content="Apply for admissions at Fortunes High School, Hyderabad. Nursery to 10th Class admissions open for 2026-27. Best CBSE & SSC school in Tilak Nagar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="Fortunes Logo.png">
+    <style>
+        :root {
+            --bg-cream: #F8FBFF;
+            --primary-blue: #005696;
+            --primary-blue-dark: #003D6B;
+            --secondary-blue: #49B3E3;
+            --accent-gold: #C69C30;
+            --accent-orange: #FF5C35;
+            --accent-yellow: #FFB01F;
+            --text-dark: #1A1A1A;
+            --white: #FFFFFF;
+            --container-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--white);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        /* Header & Nav */
+        header {
+            padding: 1.25rem 0;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            z-index: 2000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-blue);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-blue-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary-blue);
+        }
+
+        .btn-white:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
+
+        .btn-orange {
+            background: var(--accent-orange);
+            color: white;
+        }
+
+        .btn-orange:hover {
+            background: #ff451a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 92, 53, 0.3);
+        }
+
+        .btn-red {
+            background-color: #E31E24;
+            color: white;
+        }
+
+        .btn-red:hover {
+            background-color: #C1171D;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(227, 30, 36, 0.2);
+        }
+
+        .btn-yellow {
+            background-color: #FFB01F;
+            color: var(--text-dark);
+        }
+
+        .btn-yellow:hover {
+            background-color: #E69D19;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 176, 31, 0.2);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0 8rem;
+            background-color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--primary-blue-dark);
+        }
+
+        .hero-content .highlight-blue {
+            color: var(--primary-blue);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-content .highlight-blue::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 15px;
+            background-color: rgba(0, 86, 150, 0.1);
+            z-index: -1;
+        }
+
+        .hero-content .subheading {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .hero-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.2rem;
+            margin-bottom: 3rem;
+            list-style: none;
+        }
+
+        .hero-highlights li {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--primary-blue-dark);
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 40px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .blob {
+            position: absolute;
+            z-index: 1;
+            filter: blur(40px);
+            opacity: 0.5;
+        }
+
+        .blob-1 {
+            width: 350px;
+            height: 350px;
+            background: var(--primary-blue);
+            top: -50px;
+            right: -50px;
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        }
+
+        .blob-2 {
+            width: 300px;
+            height: 300px;
+            background: var(--accent-yellow);
+            bottom: -30px;
+            left: -30px;
+            border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+        }
+
+        .doodle {
+            position: absolute;
+            z-index: 3;
+            color: var(--text-dark);
+        }
+
+        .doodle-arrow {
+            top: -20px;
+            left: -40px;
+            transform: rotate(-20deg);
+            animation: float 3s ease-in-out infinite;
+            color: var(--accent-orange);
+        }
+
+        .doodle-star {
+            bottom: 20px;
+            right: -20px;
+            color: var(--accent-yellow);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(-20deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(-15deg);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+        }
+
+        /* Admission Form */
+        .form-section {
+            padding: 6rem 0;
+            background: var(--bg-cream);
+        }
+
+        .form-card {
+            max-width: 600px;
+            margin: -8rem auto 0;
+            background: white;
+            padding: 3.5rem;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 20;
+        }
+
+        .form-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            color: var(--primary-blue);
+        }
+
+        .form-card p {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: #666;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid #eee;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .btn-submit {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        /* Classes Offered */
+        .section-padding {
+            padding: 8rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--primary-blue-dark);
+        }
+
+        .classes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .class-box {
+            background: white;
+            padding: 0;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eee;
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
+
+        .class-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 2rem;
+        }
+
+        .class-content {
+            padding: 0 2rem 3rem;
+        }
+
+        .class-box:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-yellow);
+        }
+
+        .class-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+
+        .class-box p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Admission Process */
+        .process-section {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .process-section .section-title h2 {
+            color: white;
+        }
+
+        .process-card {
+            background: white;
+            padding: 4rem 3rem;
+            border-radius: 40px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            color: var(--text-dark);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .process-item {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-yellow);
+            color: var(--primary-blue-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+
+        .process-item h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Documents Required */
+        .docs-section {
+            background: #f8fafc;
+        }
+
+        .docs-list {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .doc-item {
+            background: white;
+            padding: 2.5rem 1.5rem;
+            border-radius: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .doc-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-blue);
+            box-shadow: 0 15px 30px rgba(0, 86, 150, 0.1);
+        }
+
+        .doc-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 86, 150, 0.05);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            transition: all 0.3s ease;
+        }
+
+        .doc-item:hover .doc-icon {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .doc-item span {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--primary-blue-dark);
+            line-height: 1.4;
+        }
+
+        /* Visit School */
+        .visit-section {
+            background: var(--bg-cream);
+            text-align: center;
+        }
+
+        .address-box h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+
+        .address-box p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .cta-card {
+            background: linear-gradient(135deg, #FF5C35 0%, #FFB01F 100%);
+            padding: 4rem 2rem;
+            border-radius: 80px 0 80px 0;
+            text-align: center;
+            color: white;
+            box-shadow: 0 20px 40px rgba(255, 92, 53, 0.2);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cta-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .cta-card p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .main-footer {
+            background-color: #001A2E;
+            color: white;
+            padding: 8rem 0 4rem;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr 1fr;
+            gap: 6rem;
+            margin-bottom: 6rem;
+        }
+
+        .footer-brand p {
+            margin: 2rem 0;
+            color: #A0B1C0;
+            line-height: 1.6;
+        }
+
+        .footer-logo {
+            height: 80px;
+            background: white;
+            padding: 8px 15px;
+            border-radius: 15px;
+            object-fit: contain;
+        }
+
+        .footer-links h3,
+        .footer-contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links ul li a {
+            color: #A0B1C0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links ul li a:hover {
+            color: #FF5C35;
+        }
+
+        .footer-contact-info p {
+            color: #A0B1C0;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .footer-contact-info strong {
+            color: white;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .footer-bottom {
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .seo-keywords p {
+            font-size: 0.9rem;
+            color: #5D7285;
+            font-weight: 500;
+        }
+
+        .footer-copyright p {
+            font-size: 0.9rem;
+            color: #5D7285;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: #FF5C35;
+            transform: translateY(-5px);
+        }
+
+        .social-links a svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        /* Bottom Nav */
+        .bottom-nav {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 10px 0;
+            border-top: 1px solid #EEE;
+        }
+
+        .bottom-nav-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .bottom-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #666;
+            font-size: 0.7rem;
+            font-weight: 600;
+            gap: 4px;
+        }
+
+        .bottom-nav-item svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+
+        .bottom-nav-item.active {
+            color: var(--primary-blue);
+        }
+
+        /* Floating Contact */
+        .floating-contact {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+            color: white;
+            text-decoration: none;
+        }
+
+        .floating-btn.whatsapp {
+            background-color: #25D366;
+        }
+
+        .floating-btn.call {
+            background-color: var(--primary-blue);
+        }
+
+        .floating-btn svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+            }
+
+            .hero-btns,
+            .hero-highlights {
+                justify-content: center;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .classes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .docs-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .nav-links,
+            header .btn {
+                display: none;
+            }
+
+            .bottom-nav {
+                display: block;
+            }
+
+            body {
+                padding-bottom: 70px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+            }
+
+            .form-card {
+                margin-top: 0;
+                padding: 2rem;
+                border-radius: 0;
+            }
+
+            .process-card {
+                padding: 3rem 1.5rem;
+                border-radius: 30px;
+            }
+
+            .classes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .docs-list {
+                grid-template-columns: 1fr;
+            }
+
+            .docs-list {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-card {
+                padding: 3rem 1.5rem;
+                border-radius: 40px 0 40px 0;
+            }
+
+            .cta-card h2 {
+                font-size: 2rem;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+
+            .footer-brand,
+            .footer-links,
+            .footer-contact-info {
+                align-items: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            .floating-contact {
+                bottom: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="Fortunes Logo.png" alt="Fortunes High School Logo"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html" class="active">Admissions</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="#enquire" class="btn btn-primary">Apply Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>Admissions Open <span class="highlight-blue">2026–27</span></h1>
+                    <p class="subheading">From Nursery to 10th | Hyderabad's Top Choice for Holistic Excellence</p>
+
+                    <ul class="hero-highlights">
+                        <li><span style="color: var(--accent-orange);">✔</span> Nursery to 10th Class</li>
+                        <li><span style="color: var(--accent-orange);">✔</span> CBSE + SSC Syllabus</li>
+                        <li><span style="color: var(--accent-orange);">✔</span> PMP Teaching Method</li>
+                        <li><span style="color: var(--accent-orange);">✔</span> Limited Seats Available</li>
+                    </ul>
+
+                    <div class="hero-btns">
+                        <a href="#enquire" class="btn btn-red">Apply Now</a>
+                        <a href="tel:+917331133394" class="btn btn-yellow">Call Now</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="blob blob-1"></div>
+                    <div class="blob blob-2"></div>
+                    <img src="hero_students.png" alt="Happy school students at Fortunes High School">
+
+                    <!-- Doodles -->
+                    <svg class="doodle doodle-arrow" width="80" height="80" viewBox="0 0 80 80">
+                        <path d="M10 70 Q 30 10 70 20 M 70 20 L 60 15 M 70 20 L 65 30" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" />
+                    </svg>
+                    <svg class="doodle doodle-star" width="40" height="40" viewBox="0 0 40 40">
+                        <path d="M20 5 L 24 15 L 35 15 L 26 22 L 30 32 L 20 26 L 10 32 L 14 22 L 5 15 L 16 15 Z"
+                            fill="currentColor" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Admission Form -->
+        <section id="enquire" class="form-section">
+            <div class="container">
+                <div class="form-card">
+                    <h2>Enquire Now</h2>
+                    <p>Take the first step towards your child's bright future</p>
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="student_name">Student Name</label>
+                            <input type="text" id="student_name" placeholder="Enter student's full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="parent_phone">Parent Phone</label>
+                            <input type="tel" id="parent_phone" placeholder="Enter mobile number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="class_apply">Class Applying For</label>
+                            <select id="class_apply" required>
+                                <option value="">Select Class</option>
+                                <option value="nursery">Nursery - UKG</option>
+                                <option value="primary">1st - 5th Class</option>
+                                <option value="secondary">6th - 10th Class</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">Submit Inquiry ↗</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Classes Offered -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Classes Offered</h2>
+                </div>
+                <div class="classes-grid">
+                    <div class="class-box">
+                        <img src="primary_students.png" alt="Nursery - UKG" class="class-image">
+                        <div class="class-content">
+                            <h3>Nursery – UKG</h3>
+                            <p>Activity-based learning designed to spark curiosity and joy in early childhood
+                                development.</p>
+                        </div>
+                    </div>
+                    <div class="class-box">
+                        <img src="Boy_and_girl_studying_202604292134.png" alt="1st - 5th Class" class="class-image">
+                        <div class="class-content">
+                            <h3>1st – 5th Class</h3>
+                            <p>Integrated syllabus focusing on foundational literacy, numeracy, and life skills for
+                                young
+                                minds.</p>
+                        </div>
+                    </div>
+                    <div class="class-box">
+                        <img src="secondary_students.png" alt="6th - 10th Class" class="class-image">
+                        <div class="class-content">
+                            <h3>6th – 10th Class</h3>
+                            <p>SSC syllabus with a strong emphasis on academic excellence, discipline, and holistic
+                                growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Admission Process -->
+        <section class="process-section section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Admission Process</h2>
+                </div>
+                <div class="process-card">
+                    <div class="process-grid">
+                        <div class="process-item">
+                            <div class="step-number">1</div>
+                            <h4>Fill Form</h4>
+                            <p>Complete the quick enquiry form above.</p>
+                        </div>
+                        <div class="process-item">
+                            <div class="step-number">2</div>
+                            <h4>Get a Call</h4>
+                            <p>Our admission team will contact you.</p>
+                        </div>
+                        <div class="process-item">
+                            <div class="step-number">3</div>
+                            <h4>Visit School</h4>
+                            <p>Come for a campus tour & interaction.</p>
+                        </div>
+                        <div class="process-item">
+                            <div class="step-number">4</div>
+                            <h4>Confirm</h4>
+                            <p>Complete documentation & secure seat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Documents Required -->
+        <section class="docs-section section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Documents Required</h2>
+                </div>
+                <div class="docs-list">
+                    <div class="doc-item">
+                        <div class="doc-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg>
+                        </div>
+                        <span>Birth Certificate</span>
+                    </div>
+                    <div class="doc-item">
+                        <div class="doc-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                        </div>
+                        <span>Previous School Records</span>
+                    </div>
+                    <div class="doc-item">
+                        <div class="doc-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                        </div>
+                        <span>Passport Size Photos</span>
+                    </div>
+                    <div class="doc-item">
+                        <div class="doc-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="8.5" cy="7" r="4"></circle>
+                                <polyline points="17 11 19 13 23 9"></polyline>
+                            </svg>
+                        </div>
+                        <span>Aadhar Card Copy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Visit Our School -->
+        <section class="visit-section section-padding" style="background-color: var(--white);">
+            <div class="container" style="text-align: center;">
+                <div class="section-title">
+                    <span class="eyebrow"
+                        style="display: block; color: var(--accent-orange); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">Experience
+                        Excellence</span>
+                    <h2
+                        style="font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--primary-blue-dark);">
+                        Visit Our School</h2>
+                </div>
+                <p
+                    style="font-size: 1.25rem; color: var(--text-light); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    👉 <strong>Tilak Nagar, Hyderabad</strong><br>
+                    Come see our vibrant classrooms and meet our dedicated educators.
+                </p>
+                <div class="hero-btns" style="justify-content: center;">
+                    <a href="https://maps.google.com/maps?q=Fortunes%20High%20School%2C%20Tilak%20Nagar%2C%20Hyderabad"
+                        target="_blank" class="btn btn-primary">Get Directions</a>
+                    <a href="tel:+917331133394" class="btn btn-outline"
+                        style="border: 2px solid var(--primary-blue); color: var(--primary-blue);">Call Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Final CTA -->
+        <section class="final-cta">
+            <div class="container">
+                <div class="cta-card">
+                    <h2>Ready to join our family? ✨</h2>
+                    <p>Limited seats available for 2026-27. Don't let your child miss out!</p>
+                    <div class="hero-btns" style="justify-content: center;">
+                        <a href="#enquire" class="btn btn-white">Apply Now</a>
+                        <a href="https://wa.me/917331133394?text=Hi,%20I'm%20interested%20in%20admissions%20at%20Fortunes%20High%20School."
+                            class="btn btn-outline" style="border-color: white; color: white;">WhatsApp Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="Fortunes Logo.png" alt="Fortunes High School" class="footer-logo">
+                    <p>Empowering students with holistic education and Positive Mind Programming (PMP) for a successful
+                        future.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg></a>
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg></a>
+                        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                </path>
+                            </svg></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact-info">
+                    <h3>Contact Info</h3>
+                    <p><strong>Address:</strong> # 2-2-1164/1/4/A/1, Near Kishanrao Hospital, Tilak Nagar,
+                        Hyderabad-500044</p>
+                    <p><strong>Phone:</strong> +91 73311 33394, 73311 33391</p>
+                    <p><strong>Email:</strong> srikakatiya227@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="seo-keywords">
+                    <p> CBSE Schools | SSC Schools | English Medium School Near Tilak Nagar
+                    </p>
+                </div>
+                <div class="footer-copyright">
+                    <p>© 2026 Fortunes High School. All rights reserved. | Powered by <a href="https://www.theupliv.com"
+                            target="_blank">UPliv</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <nav class="bottom-nav">
+        <div class="bottom-nav-container">
+            <a href="index.html" class="bottom-nav-item">
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+                <span>Home</span>
+            </a>
+            <a href="about.html" class="bottom-nav-item">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="16" x2="12" y2="12" />
+                    <line x1="12" y1="8" x2="12.01" y2="8" />
+                </svg>
+                <span>About</span>
+            </a>
+            <a href="admissions.html" class="bottom-nav-item active">
+                <svg viewBox="0 0 24 24">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="8.5" cy="7" r="4" />
+                    <line x1="20" y1="8" x2="20" y2="14" />
+                    <line x1="23" y1="11" x2="17" y2="11" />
+                </svg>
+                <span>Admissions</span>
+            </a>
+            <a href="gallery.html" class="bottom-nav-item">
+                <svg viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <polyline points="21 15 16 10 5 21" />
+                </svg>
+                <span>Gallery</span>
+            </a>
+            <a href="contact.html" class="bottom-nav-item">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                </svg>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="floating-contact">
+        <a href="tel:+917331133394" class="floating-btn call" aria-label="Call Us">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27 11.72 11.72 0 0 0 3.67.58 1 1 0 0 1 1 1v3.59a1 1 0 0 1-1 1A16 16 0 0 1 3 4a1 1 0 0 1 1-1h3.59a1 1 0 0 1 1 1 11.72 11.72 0 0 0 .58 3.67 1 1 0 0 1-.27 1.11l-2.2 2.2z" />
+            </svg>
+        </a>
+        <a href="https://wa.me/917331133394?text=Hi,%20I'm%20interested%20in%20admissions%20at%20Fortunes%20High%20School.%20Can%20you%20provide%20more%20details?"
+            target="_blank" class="floating-btn whatsapp" aria-label="WhatsApp Us">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M12.031 2C6.446 2 1.921 6.46 1.921 11.94c0 1.76.463 3.42 1.29 4.88l-1.12 4.09 4.22-1.1c1.39.75 2.97 1.18 4.67 1.18 5.58 0 10.11-4.46 10.11-9.94S17.611 2 12.031 2zM6.011 16.5c-.27-.43-.49-.9-.65-1.39L5.131 14c-.66-1.15-1.02-2.47-1.02-3.85 0-4.04 3.32-7.34 7.39-7.34 4.07 0 7.39 3.3 7.39 7.34s-3.32 7.34-7.39 7.34c-1.39 0-2.71-.38-3.85-1.05l-.33-.19-2.52.66.66-2.41z" />
+            </svg>
+        </a>
+    </div>
+</body>
+
+</html>

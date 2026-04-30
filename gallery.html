@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | Fortunes High School Hyderabad</title>
-    <meta name="description" content="Explore the vibrant life at Fortunes High School. Photos and videos of our campus, students, and activities.">
+    <meta name="description"
+        content="Explore the vibrant life at Fortunes High School. Photos and videos of our campus, students, and activities.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
     <link rel="icon" type="image/png" href="Fortunes Logo.png">
     <style>
         :root {
@@ -18,68 +21,538 @@
             --secondary-blue: #49B3E3;
             --accent-gold: #C69C30;
             --accent-orange: #FF5C35;
+            --accent-yellow: #FFB01F;
             --text-dark: #1A1A1A;
             --white: #FFFFFF;
             --container-width: 1200px;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-cream); color: var(--text-dark); overflow-x: hidden; }
-
-        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; }
-
-        header { padding: 1.5rem 0; background: white; box-shadow: 0 2px 20px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo img { height: 60px; }
-        .nav-links { display: flex; list-style: none; gap: 2.5rem; }
-        .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--primary-blue); }
-        .btn { padding: 0.8rem 1.8rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; }
-        .btn-primary { background: var(--primary-blue); color: white; }
-
-        .gallery-hero { padding: 6rem 0; text-align: center; background: white; }
-        .gallery-hero h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 1.5rem; }
-        .gallery-hero p { font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto; }
-
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 6rem; padding: 4rem 0; }
-        .gallery-item { border-radius: 20px; overflow: hidden; position: relative; aspect-ratio: 4/3; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .gallery-item img, .gallery-item video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-        .gallery-item:hover img, .gallery-item:hover video { transform: scale(1.1); }
-        
-        .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; pointer-events: none; }
-        .play-icon { width: 60px; height: 60px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-
-        .main-footer { background: #001A2E; color: white; padding: 6rem 0 3rem; }
-        .footer-top { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; gap: 4rem; margin-bottom: 4rem; }
-        .footer-logo { height: 70px; background: white; padding: 5px 10px; border-radius: 10px; margin-bottom: 1.5rem; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; }
-
-        .bottom-nav { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: white; z-index: 1000; padding: 10px 0; border-top: 1px solid #eee; }
-        .bottom-nav-container { display: flex; justify-content: space-around; }
-        .bottom-nav-item { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #666; font-size: 0.7rem; font-weight: 600; gap: 4px; }
-        .bottom-nav-item svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; }
-        .bottom-nav-item.active { color: var(--primary-blue); }
-
-        .floating-contact { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 9999; }
-        .floating-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0,0,0,0.2); color: white; text-decoration: none; }
-        .floating-btn.whatsapp { background: #25D366; }
-        .floating-btn.call { background: var(--primary-blue); }
-        .floating-btn svg { fill: white; width: 30px; height: 30px; }
-
-        @media (max-width: 768px) {
-            .nav-links, header .btn { display: none; }
-            .bottom-nav { display: block; }
-            body { padding-bottom: 70px; }
-            .floating-contact { bottom: 100px; }
-            .gallery-hero h1 { font-size: 2.5rem; }
-            .footer-top { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
-            .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .video-modal { display: none; position: fixed; z-index: 99999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); align-items: center; justify-content: center; backdrop-filter: blur(10px); }
-        .modal-content { position: relative; width: 90%; max-width: 1000px; }
-        .modal-content video { width: 100%; border-radius: 20px; }
-        .close-modal { position: absolute; top: -50px; right: 0; color: white; font-size: 40px; cursor: pointer; }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Header & Nav */
+        header {
+            padding: 1.25rem 0;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            z-index: 2000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-blue);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.75rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #003d6b;
+            transform: translateY(-2px);
+        }
+
+        /* Gallery Hero */
+        .gallery-hero {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            background: white;
+        }
+
+        .gallery-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .gallery-hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0 8rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            background: #eee;
+        }
+
+        .gallery-item img,
+        .gallery-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .gallery-item:hover img,
+        .gallery-item:hover video {
+            transform: scale(1.1);
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            transition: background 0.3s ease;
+        }
+
+        .gallery-item:hover .video-overlay {
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        .play-btn {
+            width: 70px;
+            height: 70px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .play-btn {
+            transform: scale(1.15);
+        }
+
+        .play-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--primary-blue);
+            margin-left: 5px;
+        }
+
+        /* Footer */
+        .main-footer {
+            background-color: #001A2E;
+            color: white;
+            padding: 8rem 0 4rem;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr 1fr;
+            gap: 6rem;
+            margin-bottom: 6rem;
+        }
+
+        .footer-brand p {
+            margin: 2rem 0;
+            color: #A0B1C0;
+            line-height: 1.6;
+        }
+
+        .footer-logo {
+            height: 80px;
+            background: white;
+            padding: 8px 15px;
+            border-radius: 15px;
+            object-fit: contain;
+        }
+
+        .footer-links h3,
+        .footer-contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links ul li a {
+            color: #A0B1C0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links ul li a:hover {
+            color: #FF5C35;
+        }
+
+        .footer-contact-info p {
+            color: #A0B1C0;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .footer-contact-info strong {
+            color: white;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .footer-bottom {
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .seo-keywords p {
+            font-size: 0.9rem;
+            color: #5D7285;
+            font-weight: 500;
+        }
+
+        .footer-copyright p {
+            font-size: 0.9rem;
+            color: #5D7285;
+        }
+
+        .footer-copyright a {
+            color: #A0B1C0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-copyright a:hover {
+            color: #FF5C35;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #FF5C35;
+            transform: translateY(-5px);
+        }
+
+        .social-links a svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        /* Bottom Nav */
+        .bottom-nav {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 10px 0;
+            border-top: 1px solid #EEE;
+        }
+
+        .bottom-nav-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .bottom-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #666;
+            font-size: 0.7rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            gap: 4px;
+        }
+
+        .bottom-nav-item svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .bottom-nav-item.active,
+        .bottom-nav-item:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Floating Contact */
+        .floating-contact {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            color: white;
+            text-decoration: none;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1) translateY(-5px);
+        }
+
+        .floating-btn.whatsapp {
+            background-color: #25D366;
+        }
+
+        .floating-btn.call {
+            background-color: var(--primary-blue);
+        }
+
+        .floating-btn svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        /* Modal */
+        .media-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            position: relative;
+            width: 90%;
+            max-width: 1000px;
+            animation: modalScale 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        @keyframes modalScale {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-content video,
+        .modal-content img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .close-modal:hover {
+            transform: rotate(90deg);
+        }
+
+        @media (max-width: 768px) {
+
+            .nav-links,
+            header .btn {
+                display: none;
+            }
+
+            .bottom-nav {
+                display: block;
+            }
+
+            body {
+                padding-bottom: 70px;
+            }
+
+            .floating-contact {
+                bottom: 100px;
+                right: 20px;
+            }
+
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+            }
+
+            .floating-btn svg {
+                width: 25px;
+                height: 25px;
+            }
+
+            .gallery-hero {
+                padding: 4rem 0;
+            }
+
+            .gallery-hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                padding: 2rem 1.5rem;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .footer-brand,
+            .footer-links,
+            .footer-contact-info {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 
@@ -87,15 +560,18 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo"><a href="index.html"><img src="Fortunes Logo.png" alt="Logo"></a></div>
+                <div class="logo">
+                    <a href="index.html"><img src="Fortunes Logo.png" alt="Fortunes High School Logo"></a>
+                </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="index.html#academics">Academics</a></li>
-                    <li><a href="gallery.html" style="color: var(--primary-blue);">Gallery</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
-                <a href="index.html#contact" class="btn btn-primary">Book a Tour</a>
+                <a href="admissions.html#enquire" class="btn btn-primary">Apply Now</a>
             </nav>
         </div>
     </header>
@@ -110,27 +586,175 @@
 
         <section class="container">
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="img.1.jpeg" alt="School Life" loading="lazy"></div>
-                <div class="gallery-item"><img src="img.2.jpeg" alt="School Life" loading="lazy"></div>
-                <div class="gallery-item"><img src="img.3.jpeg" alt="School Life" loading="lazy"></div>
+                <!-- Row 1 -->
+                <div class="gallery-item"><img src="img.1.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.2.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
                 <div class="gallery-item">
                     <video src="video.1.mp4" muted loop></video>
-                    <div class="video-overlay"><div class="play-icon">▶</div></div>
+                    <div class="video-overlay">
+                        <div class="play-btn">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 3l14 9-14 9V3z" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <div class="gallery-item"><img src="img.4.jpeg" alt="School Life" loading="lazy"></div>
-                <div class="gallery-item"><img src="img.5.jpeg" alt="School Life" loading="lazy"></div>
+
+                <!-- Row 2 -->
+                <div class="gallery-item"><img src="img.3.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.4.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.5.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+
+                <!-- Row 3 -->
                 <div class="gallery-item">
                     <video src="video.2.mp4" muted loop></video>
-                    <div class="video-overlay"><div class="play-icon">▶</div></div>
+                    <div class="video-overlay">
+                        <div class="play-btn">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 3l14 9-14 9V3z" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <div class="gallery-item"><img src="img.6.jpeg" alt="School Life" loading="lazy"></div>
-                <div class="gallery-item"><img src="img.7.jpeg" alt="School Life" loading="lazy"></div>
-                <div class="gallery-item"><img src="img.8.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item"><img src="img.6.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.7.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+
+                <!-- Row 4 -->
+                <div class="gallery-item"><img src="img.8.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.9.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
                 <div class="gallery-item">
                     <video src="video.3.mp4" muted loop></video>
-                    <div class="video-overlay"><div class="play-icon">▶</div></div>
+                    <div class="video-overlay">
+                        <div class="play-btn">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 3l14 9-14 9V3z" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <div class="gallery-item"><img src="img.9.jpeg" alt="School Life" loading="lazy"></div>
+
+                <!-- Row 5 -->
+                <div class="gallery-item"><img src="img.10.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.11.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.12.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+
+                <!-- Row 6 -->
+                <div class="gallery-item">
+                    <video src="video.4.mp4" muted loop></video>
+                    <div class="video-overlay">
+                        <div class="play-btn">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 3l14 9-14 9V3z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item"><img src="img.13.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.14.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+
+                <!-- Continues with the rest of the images -->
+                <div class="gallery-item"><img src="img.15.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.16.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.17.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.18.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.19.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.20.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.21.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.22.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.23.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.24.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.25.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.26.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.27.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.28.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img.29.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img30.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img31.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img32.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img33.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img34.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img35.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img36.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img37.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img38.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img39.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img40.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img41.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img42.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img43.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img44.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img45.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img46.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+                <div class="gallery-item"><img src="img47.jpeg" alt="Fortunes High School Activity" loading="lazy">
+                </div>
+
+                <!-- Promotional & Student Life Images -->
+                <div class="gallery-item"><img src="primary_students.png" alt="Primary Students at Fortunes High School"
+                        loading="lazy"></div>
+                <div class="gallery-item"><img src="secondary_students.png"
+                        alt="Secondary Students at Fortunes High School" loading="lazy"></div>
+                <div class="gallery-item"><img src="Boy_and_girl_studying_202604292134.png" alt="Students Studying"
+                        loading="lazy"></div>
+                <div class="gallery-item"><img src="6th_class_girl_standing_sports_202604292131.png" alt="Student Life"
+                        loading="lazy"></div>
+                <div class="gallery-item"><img src="Girl_studying_book_black_background_202604292245.png"
+                        alt="Focused Learning" loading="lazy"></div>
+                <div class="gallery-item"><img
+                        src="Boy_doing_sketches_black_background_202604292249 - 29-04-2026 22-57-08.png"
+                        alt="Creative Arts" loading="lazy"></div>
+                <div class="gallery-item"><img src="Little_girl_talking_smiling_202604292238.png" alt="Happy Students"
+                        loading="lazy"></div>
+                <div class="gallery-item"><img src="a_little_boy_keeping_a_202604292247.png" alt="Student Activity"
+                        loading="lazy"></div>
+                <div class="gallery-item"><img src="littleboy.png" alt="Primary Education" loading="lazy"></div>
+                <div class="gallery-item"><img src="mom nd boy.png" alt="Parent-Teacher Interaction" loading="lazy">
+                </div>
             </div>
         </section>
     </main>
@@ -139,87 +763,178 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="Fortunes Logo.png" alt="Logo" class="footer-logo">
-                    <p>Empowering students with holistic education.</p>
+                    <img src="Fortunes Logo.png" alt="Fortunes High School" class="footer-logo">
+                    <p>Empowering students with holistic education and Positive Mind Programming (PMP) for a successful
+                        future.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg></a>
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg></a>
+                        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                </path>
+                            </svg></a>
+                    </div>
                 </div>
+
                 <div class="footer-links">
-                    <h3>Links</h3>
+                    <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-contact-info">
-                    <h3>Contact</h3>
-                    <p>Tilak Nagar, Hyderabad</p>
-                    <p>+91 73311 33394</p>
+                    <h3>Contact Info</h3>
+                    <p><strong>Address:</strong> # 2-2-1164/1/4/A/1, Near Kishanrao Hospital, Tilak Nagar,
+                        Hyderabad-500044</p>
+                    <p><strong>Phone:</strong> +91 73311 33394, 73311 33391</p>
+                    <p><strong>Email:</strong> srikakatiya227@gmail.com</p>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>© 2024 Fortunes High School</p>
-                <p>Powered by UPliv</p>
+                <div class="seo-keywords">
+                    <p> CBSE Schools | SSC Schools | English Medium School Near Tilak Nagar
+                    </p>
+                </div>
+                <div class="footer-copyright">
+                    <p>© 2026 Fortunes High School. All rights reserved. | Powered by <a href="https://www.theupliv.com"
+                            target="_blank">UPliv</a></p>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Mobile Bottom Navigation -->
     <nav class="bottom-nav">
         <div class="bottom-nav-container">
             <a href="index.html" class="bottom-nav-item">
-                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
                 <span>Home</span>
             </a>
             <a href="about.html" class="bottom-nav-item">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="16" x2="12" y2="12" />
+                    <line x1="12" y1="8" x2="12.01" y2="8" />
+                </svg>
                 <span>About</span>
             </a>
+            <a href="academics.html" class="bottom-nav-item">
+                <svg viewBox="0 0 24 24">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                </svg>
+                <span>Academics</span>
+            </a>
             <a href="gallery.html" class="bottom-nav-item active">
-                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <svg viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <polyline points="21 15 16 10 5 21" />
+                </svg>
                 <span>Gallery</span>
             </a>
-            <a href="index.html#contact" class="bottom-nav-item">
-                <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <a href="contact.html" class="bottom-nav-item">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                </svg>
                 <span>Contact</span>
             </a>
         </div>
     </nav>
 
+    <!-- Floating Contact Buttons -->
     <div class="floating-contact">
-        <a href="tel:+917331133394" class="floating-btn call"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27 11.72 11.72 0 0 0 3.67.58 1 1 0 0 1 1 1v3.59a1 1 0 0 1-1 1A16 16 0 0 1 3 4a1 1 0 0 1 1-1h3.59a1 1 0 0 1 1 1 11.72 11.72 0 0 0 .58 3.67 1 1 0 0 1-.27 1.11l-2.2 2.2z"/></svg></a>
-        <a href="https://wa.me/917331133394" class="floating-btn whatsapp"><svg viewBox="0 0 24 24"><path d="M12.031 2C6.446 2 1.921 6.46 1.921 11.94c0 1.76.463 3.42 1.29 4.88l-1.12 4.09 4.22-1.1c1.39.75 2.97 1.18 4.67 1.18 5.58 0 10.11-4.46 10.11-9.94S17.611 2 12.031 2z"/></svg></a>
+        <a href="tel:+917331133394" class="floating-btn call" aria-label="Call Us">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27 11.72 11.72 0 0 0 3.67.58 1 1 0 0 1 1 1v3.59a1 1 0 0 1-1 1A16 16 0 0 1 3 4a1 1 0 0 1 1-1h3.59a1 1 0 0 1 1 1 11.72 11.72 0 0 0 .58 3.67 1 1 0 0 1-.27 1.11l-2.2 2.2z" />
+            </svg>
+        </a>
+        <a href="https://wa.me/917331133394?text=Hi,%20I'm%20interested%20in%20admissions%20at%20Fortunes%20High%20School.%20Can%20you%20provide%20more%20details?"
+            target="_blank" class="floating-btn whatsapp" aria-label="WhatsApp Us">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M12.031 2C6.446 2 1.921 6.46 1.921 11.94c0 1.76.463 3.42 1.29 4.88l-1.12 4.09 4.22-1.1c1.39.75 2.97 1.18 4.67 1.18 5.58 0 10.11-4.46 10.11-9.94S17.611 2 12.031 2zM6.011 16.5c-.27-.43-.49-.9-.65-1.39L5.131 14c-.66-1.15-1.02-2.47-1.02-3.85 0-4.04 3.32-7.34 7.39-7.34 4.07 0 7.39 3.3 7.39 7.34s-3.32 7.34-7.39 7.34c-1.39 0-2.71-.38-3.85-1.05l-.33-.19-2.52.66.66-2.41z" />
+            </svg>
+        </a>
     </div>
 
-    <div id="videoModal" class="video-modal">
+    <!-- Media Modal (Lightbox) -->
+    <div id="mediaModal" class="media-modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <video id="modalVideo" controls></video>
+            <img id="modalImage" src="" alt="Full View">
         </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const items = document.querySelectorAll('.gallery-item');
-            const modal = document.getElementById('videoModal');
+            const modal = document.getElementById('mediaModal');
             const modalVideo = document.getElementById('modalVideo');
+            const modalImage = document.getElementById('modalImage');
             const closeModal = document.querySelector('.close-modal');
+
             items.forEach(item => {
-                const video = item.querySelector('video');
-                if (video) {
-                    item.addEventListener('click', () => {
+                item.addEventListener('click', () => {
+                    const video = item.querySelector('video');
+                    const img = item.querySelector('img');
+
+                    // Reset modal content
+                    modalVideo.style.display = 'none';
+                    modalImage.style.display = 'none';
+                    modalVideo.pause();
+                    modalVideo.src = "";
+                    modalImage.src = "";
+
+                    if (video) {
                         modalVideo.src = video.src;
+                        modalVideo.style.display = 'block';
                         modal.style.display = 'flex';
                         modalVideo.play();
-                    });
-                }
+                    } else if (img) {
+                        modalImage.src = img.src;
+                        modalImage.style.display = 'block';
+                        modal.style.display = 'flex';
+                    }
+                });
             });
+
             const closeFunc = () => {
                 modal.style.display = 'none';
                 modalVideo.pause();
                 modalVideo.src = "";
+                modalImage.src = "";
+                modalVideo.style.display = 'none';
+                modalImage.style.display = 'none';
             };
+
             closeModal.addEventListener('click', closeFunc);
-            modal.addEventListener('click', (e) => { if (e.target === modal) closeFunc(); });
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeFunc();
+            });
         });
     </script>
 </body>
+
 </html>
