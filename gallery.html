@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Fortunes High School Hyderabad</title>
+    <meta name="description" content="Explore the vibrant life at Fortunes High School. Photos and videos of our campus, students, and activities.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Fortunes Logo.png">
+    <style>
+        :root {
+            --bg-cream: #F8FBFF;
+            --primary-blue: #005696;
+            --primary-blue-dark: #003D6B;
+            --accent-gold: #C69C30;
+            --accent-orange: #FF5C35;
+            --text-dark: #1A1A1A;
+            --white: #FFFFFF;
+            --container-width: 1200px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-cream); color: var(--text-dark); overflow-x: hidden; }
+
+        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; }
+
+        header { padding: 1.5rem 0; background: white; box-shadow: 0 2px 20px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 60px; }
+        .nav-links { display: flex; list-style: none; gap: 2.5rem; }
+        .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary-blue); }
+        .btn { padding: 0.8rem 1.8rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; }
+        .btn-primary { background: var(--primary-blue); color: white; }
+
+        .gallery-hero { padding: 6rem 0; text-align: center; background: white; }
+        .gallery-hero h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 1.5rem; }
+        .gallery-hero p { font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto; }
+
+        .gallery-filters { display: flex; justify-content: center; gap: 1rem; margin-bottom: 4rem; flex-wrap: wrap; }
+        .filter-btn { padding: 0.8rem 2rem; border-radius: 50px; border: 1px solid #ddd; background: white; cursor: pointer; font-weight: 600; transition: all 0.3s; }
+        .filter-btn.active, .filter-btn:hover { background: var(--primary-blue); color: white; border-color: var(--primary-blue); }
+
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 6rem; }
+        .gallery-item { border-radius: 20px; overflow: hidden; position: relative; aspect-ratio: 4/3; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .gallery-item img, .gallery-item video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .gallery-item:hover img, .gallery-item:hover video { transform: scale(1.1); }
+        
+        .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; pointer-events: none; }
+        .play-icon { width: 60px; height: 60px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .play-icon::after { content: ''; display: block; width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 15px solid var(--primary-blue); margin-left: 5px; }
+
+        /* Footer and Nav consistent with index.html */
+        /* ... simplified for brevity but includes the mobile bottom nav ... */
+
+        .bottom-nav { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: white; z-index: 1000; padding: 10px 0; border-top: 1px solid #eee; }
+        .bottom-nav-container { display: flex; justify-content: space-around; }
+        .bottom-nav-item { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #666; font-size: 0.7rem; font-weight: 600; gap: 4px; }
+        .bottom-nav-item svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; }
+        .bottom-nav-item.active { color: var(--primary-blue); }
+
+        .floating-contact { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 9999; }
+        .floating-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0,0,0,0.2); transition: all 0.3s; color: white; text-decoration: none; }
+        .floating-btn.whatsapp { background-color: #25D366; }
+        .floating-btn.call { background-color: var(--primary-blue); }
+
+        @media (max-width: 768px) {
+            .nav-links, header .btn { display: none; }
+            .bottom-nav { display: block; }
+            body { padding-bottom: 70px; }
+            .floating-contact { bottom: 100px; right: 20px; }
+            .gallery-hero h1 { font-size: 2.5rem; }
+        }
+
+        /* Video Modal (Same as index.html) */
+        .video-modal { display: none; position: fixed; z-index: 99999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); align-items: center; justify-content: center; backdrop-filter: blur(10px); }
+        .modal-content { position: relative; width: 90%; max-width: 1000px; }
+        .modal-content video { width: 100%; border-radius: 20px; }
+        .close-modal { position: absolute; top: -50px; right: 0; color: white; font-size: 40px; cursor: pointer; }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="index.html"><img src="Fortunes Logo.png" alt="Logo"></a></div>
+                <ul class="nav-links">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#academics">Academics</a></li>
+                    <li><a href="index.html#contact">Admissions</a></li>
+                    <li><a href="gallery.html" style="color: var(--primary-blue);">Gallery</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <a href="index.html#contact" class="btn btn-primary">Book a Tour</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-hero">
+            <div class="container">
+                <h1>Our <span style="color: var(--accent-orange);">Fortunes</span> Gallery</h1>
+                <p>Capturing the essence of learning, growth, and joy at Fortunes High School.</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="gallery-filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Academics</button>
+                <button class="filter-btn">Sports</button>
+                <button class="filter-btn">Events</button>
+                <button class="filter-btn">Campus</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Using assets found earlier -->
+                <div class="gallery-item"><img src="img.1.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item"><img src="img.2.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item"><img src="img.3.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item">
+                    <video src="video.1.mp4" muted loop></video>
+                    <div class="video-overlay"><div class="play-icon"></div></div>
+                </div>
+                <div class="gallery-item"><img src="img.4.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item"><img src="img.5.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item">
+                    <video src="video.2.mp4" muted loop></video>
+                    <div class="video-overlay"><div class="play-icon"></div></div>
+                </div>
+                <div class="gallery-item"><img src="img.6.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item"><img src="img.7.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item"><img src="img.8.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item">
+                    <video src="video.3.mp4" muted loop></video>
+                    <div class="video-overlay"><div class="play-icon"></div></div>
+                </div>
+                <div class="gallery-item"><img src="img.9.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item"><img src="img.10.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item"><img src="img.11.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item"><img src="img.12.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item">
+                    <video src="video.4.mp4" muted loop></video>
+                    <div class="video-overlay"><div class="play-icon"></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <video id="modalVideo" controls></video>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="bottom-nav-container">
+            <a href="index.html" class="bottom-nav-item">
+                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <span>Home</span>
+            </a>
+            <a href="index.html#about" class="bottom-nav-item">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                <span>About</span>
+            </a>
+            <a href="index.html#academics" class="bottom-nav-item">
+                <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                <span>Academics</span>
+            </a>
+            <a href="gallery.html" class="bottom-nav-item active">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Gallery</span>
+            </a>
+            <a href="index.html#contact" class="bottom-nav-item">
+                <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact">
+        <a href="tel:+917331133394" class="floating-btn call"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27 11.72 11.72 0 0 0 3.67.58 1 1 0 0 1 1 1v3.59a1 1 0 0 1-1 1A16 16 0 0 1 3 4a1 1 0 0 1 1-1h3.59a1 1 0 0 1 1 1 11.72 11.72 0 0 0 .58 3.67 1 1 0 0 1-.27 1.11l-2.2 2.2z"/></svg></a>
+        <a href="https://wa.me/917331133394?text=Hi,%20I'm%20interested%20in%20admissions%20at%20Fortunes%20High%20School." target="_blank" class="floating-btn whatsapp"><svg viewBox="0 0 24 24"><path d="M12.031 2C6.446 2 1.921 6.46 1.921 11.94c0 1.76.463 3.42 1.29 4.88l-1.12 4.09 4.22-1.1c1.39.75 2.97 1.18 4.67 1.18 5.58 0 10.11-4.46 10.11-9.94S17.611 2 12.031 2z"/></svg></a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.gallery-item');
+            const modal = document.getElementById('videoModal');
+            const modalVideo = document.getElementById('modalVideo');
+            const closeModal = document.querySelector('.close-modal');
+
+            items.forEach(item => {
+                const video = item.querySelector('video');
+                if (video) {
+                    item.addEventListener('click', () => {
+                        modalVideo.src = video.src;
+                        modal.style.display = 'flex';
+                        modalVideo.play();
+                    });
+                }
+            });
+
+            const closeFunc = () => {
+                modal.style.display = 'none';
+                modalVideo.pause();
+                modalVideo.src = "";
+            };
+
+            closeModal.addEventListener('click', closeFunc);
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeFunc(); });
+        });
+    </script>
+</body>
+</html>
