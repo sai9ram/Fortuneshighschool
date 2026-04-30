@@ -1,0 +1,6 @@
+{
+  "regions": ["bom1"],
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "framework": null
+}
