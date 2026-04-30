@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Fortunes High School Hyderabad</title>
+    <meta name="description" content="Learn about our mission, vision, and the dedicated founders of Fortunes High School.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Fortunes Logo.png">
+    <style>
+        :root {
+            --bg-cream: #F8FBFF;
+            --primary-blue: #005696;
+            --primary-blue-dark: #003D6B;
+            --accent-gold: #C69C30;
+            --accent-orange: #FF5C35;
+            --text-dark: #1A1A1A;
+            --white: #FFFFFF;
+            --footer-dark: #001A2E;
+            --container-width: 1200px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-cream); color: var(--text-dark); overflow-x: hidden; }
+
+        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; position: relative; width: 100%; }
+
+        header { padding: 1.5rem 0; background: white; box-shadow: 0 2px 20px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 60px; }
+        .nav-links { display: flex; list-style: none; gap: 2.5rem; }
+        .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary-blue); }
+        .btn { padding: 0.8rem 1.8rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .btn-primary { background: var(--primary-blue); color: white; }
+
+        .about-hero { padding: 8rem 0; background: linear-gradient(135deg, #fff 0%, #f0f7ff 100%); text-align: center; }
+        .about-hero h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; margin-bottom: 2rem; color: var(--primary-blue); }
+        .about-hero p { font-size: 1.2rem; color: #555; max-width: 800px; margin: 0 auto; line-height: 1.8; }
+
+        .vision-mission { padding: 8rem 0; background: white; }
+        .vision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        .vision-card { padding: 4rem; border-radius: 40px; background: var(--bg-cream); transition: transform 0.3s; }
+        .vision-card:hover { transform: translateY(-10px); }
+        .vision-card h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--accent-orange); }
+        .vision-card p { line-height: 1.8; font-size: 1.1rem; }
+
+        .founders-section { padding: 8rem 0; background: #F8FBFF; }
+        .founders-header { text-align: center; margin-bottom: 5rem; }
+        .founders-header h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; }
+        
+        .founders-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; max-width: 1000px; margin: 0 auto; }
+        .founder-card { background: white; border-radius: 30px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.05); text-align: center; padding: 3rem; }
+        .founder-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 2rem; border: 5px solid var(--bg-cream); }
+        .founder-card h3 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .founder-card .role { color: var(--accent-orange); font-weight: 700; margin-bottom: 1.5rem; display: block; }
+        .founder-card p { line-height: 1.6; color: #666; }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .nav-links, header .btn { display: none; }
+            .about-hero h1 { font-size: 2.8rem; }
+            .vision-grid, .founders-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .vision-card, .founder-card { padding: 2rem; }
+            section { padding: 4rem 0 !important; }
+        }
+
+        /* Footer & Common Components */
+        .main-footer { background-color: var(--footer-dark); color: white; padding: 6rem 0 3rem 0; }
+        .footer-top { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; gap: 6rem; margin-bottom: 6rem; }
+        .footer-brand p { margin: 1.5rem 0; opacity: 0.8; line-height: 1.8; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 1rem; }
+        .footer-links a { color: white; opacity: 0.8; text-decoration: none; transition: 0.3s; }
+        .footer-links a:hover { opacity: 1; color: var(--accent-yellow); }
+        .footer-contact-info p { margin-bottom: 1rem; opacity: 0.8; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 3rem; display: flex; justify-content: space-between; align-items: center; }
+        .footer-logo { height: 80px; background: white; padding: 8px 15px; border-radius: 15px; }
+
+        .bottom-nav { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: white; z-index: 1000; padding: 10px 0; border-top: 1px solid #eee; }
+        .bottom-nav-container { display: flex; justify-content: space-around; align-items: center; }
+        .bottom-nav-item { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #666; font-size: 0.7rem; font-weight: 600; gap: 4px; }
+        .bottom-nav-item svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; }
+        .bottom-nav-item.active { color: var(--primary-blue); }
+
+        .floating-contact { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 9999; }
+        .floating-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0,0,0,0.2); transition: 0.3s; color: white; text-decoration: none; }
+        .floating-btn.whatsapp { background-color: #25D366; }
+        .floating-btn.call { background-color: var(--primary-blue); }
+
+        @media (max-width: 768px) {
+            .bottom-nav { display: block; }
+            body { padding-bottom: 70px; }
+            .floating-contact { bottom: 100px; right: 20px; }
+            .footer-top { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+            .footer-brand, .footer-links, .footer-contact-info { display: flex; flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="index.html"><img src="Fortunes Logo.png" alt="Fortunes High School Logo"></a></div>
+                <ul class="nav-links">
+                    <li><a href="about.html" style="color: var(--primary-blue);">About</a></li>
+                    <li><a href="index.html#academics">Academics</a></li>
+                    <li><a href="index.html#contact">Admissions</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <a href="index.html#contact" class="btn btn-primary">Book a Tour</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="container">
+                <h1>Our <span style="color: var(--accent-orange);">Journey</span> & Vision</h1>
+                <p>Since its inception, Fortunes High School has been dedicated to nurturing young minds and building future leaders through a unique blend of traditional values and modern innovation.</p>
+            </div>
+        </section>
+
+        <section class="vision-mission">
+            <div class="container">
+                <div class="vision-grid">
+                    <div class="vision-card">
+                        <h2>Our Vision</h2>
+                        <p>To be a premier educational institution that empowers students with holistic education, critical thinking, and a strong sense of social responsibility, preparing them to excel in a globalized world.</p>
+                    </div>
+                    <div class="vision-card">
+                        <h2>Our Mission</h2>
+                        <p>To provide a nurturing environment where every child's unique potential is recognized and cultivated through Activity-Based Learning, Digital Classrooms, and Positive Mind Programming (PMP).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="founders-section">
+            <div class="container">
+                <div class="founders-header">
+                    <h2>Meet Our <span style="color: var(--primary-blue);">Founders</span></h2>
+                    <p>The visionaries behind Fortunes High School's excellence.</p>
+                </div>
+                <div class="founders-grid">
+                    <div class="founder-card">
+                        <img src="mom nd boy.png" alt="Founder 1" class="founder-img">
+                        <h3>Dr. Ramesh Kumar</h3>
+                        <span class="role">Chairman & Founder</span>
+                        <p>With over 25 years of experience in educational leadership, Dr. Kumar founded Fortunes with a vision to revolutionize the way kids learn and grow in Hyderabad.</p>
+                    </div>
+                    <div class="founder-card">
+                        <img src="primary_students.png" alt="Founder 2" class="founder-img">
+                        <h3>Mrs. S. Lakshmi</h3>
+                        <span class="role">Managing Director</span>
+                        <p>A passionate educator dedicated to implementing modern teaching methodologies and ensuring the holistic development of every student at Fortunes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 8rem 0; text-align: center;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 2rem;">Why We Are <span style="color: var(--accent-orange);">Different</span></h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem;">
+                <div style="padding: 2rem; border-radius: 20px; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">Holistic Focus</h3>
+                    <p>We don't just teach subjects; we build character and life skills.</p>
+                </div>
+                <div style="padding: 2rem; border-radius: 20px; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">PMP Approach</h3>
+                    <p>Positive Mind Programming ensures students stay motivated and resilient.</p>
+                </div>
+                <div style="padding: 2rem; border-radius: 20px; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">Modern Tech</h3>
+                    <p>Digital classrooms and digital labs for a future-ready education.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="Fortunes Logo.png" alt="Logo" class="footer-logo">
+                    <p>Empowering students with holistic education and Positive Mind Programming (PMP).</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Tilak Nagar, Hyderabad-500044</p>
+                    <p>+91 73311 33394</p>
+                    <p>srikakatiya227@gmail.com</p>
+                </div>
+            </div>
+            <div style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+                <p>© 2024 - 2026 Fortunes High School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="bottom-nav-container">
+            <a href="index.html" class="bottom-nav-item">
+                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <span>Home</span>
+            </a>
+            <a href="about.html" class="bottom-nav-item active">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                <span>About</span>
+            </a>
+            <a href="index.html#academics" class="bottom-nav-item">
+                <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                <span>Academics</span>
+            </a>
+            <a href="gallery.html" class="bottom-nav-item">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Gallery</span>
+            </a>
+            <a href="index.html#contact" class="bottom-nav-item">
+                <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact">
+        <a href="tel:+917331133394" class="floating-btn call"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27 11.72 11.72 0 0 0 3.67.58 1 1 0 0 1 1 1v3.59a1 1 0 0 1-1 1A16 16 0 0 1 3 4a1 1 0 0 1 1-1h3.59a1 1 0 0 1 1 1 11.72 11.72 0 0 0 .58 3.67 1 1 0 0 1-.27 1.11l-2.2 2.2z"/></svg></a>
+        <a href="https://wa.me/917331133394" target="_blank" class="floating-btn whatsapp"><svg viewBox="0 0 24 24"><path d="M12.031 2C6.446 2 1.921 6.46 1.921 11.94c0 1.76.463 3.42 1.29 4.88l-1.12 4.09 4.22-1.1c1.39.75 2.97 1.18 4.67 1.18 5.58 0 10.11-4.46 10.11-9.94S17.611 2 12.031 2z"/></svg></a>
+    </div>
+
+</body>
+</html>
