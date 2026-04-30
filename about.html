@@ -17,6 +17,7 @@
             --primary-blue-dark: #003D6B;
             --secondary-blue: #49B3E3;
             --accent-gold: #C69C30;
+            --accent-yellow: #FABE00;
             --accent-orange: #FF5C35;
             --text-dark: #1A1A1A;
             --white: #FFFFFF;
@@ -24,9 +25,12 @@
             --container-width: 1200px;
         }
 
+        .highlight-text { color: var(--accent-orange); font-weight: 700; font-family: 'Playfair Display', serif; font-style: italic; }
+        .highlight-blue { color: var(--primary-blue); font-weight: 700; }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Poppins', sans-serif; background-color: var(--bg-cream); color: var(--text-dark); overflow-x: hidden; line-height: 1.6; }
-        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; }
+        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; width: 100%; position: relative; }
 
         header { padding: 1.5rem 0; background: white; box-shadow: 0 2px 20px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
         nav { display: flex; justify-content: space-between; align-items: center; }
@@ -37,33 +41,79 @@
         .btn { padding: 0.8rem 1.8rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; display: inline-block; }
         .btn-primary { background: var(--primary-blue); color: white; }
 
+        /* Editorial Hero */
         .about-hero { padding: 8rem 0; background: white; position: relative; overflow: hidden; }
-        .about-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        .about-hero h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; line-height: 1.1; margin-bottom: 2rem; color: var(--primary-blue-dark); }
-        .about-hero h1 span { color: var(--accent-orange); font-style: italic; }
-        .about-hero p { font-size: 1.2rem; color: #555; margin-bottom: 2.5rem; }
-        .hero-img-stack { position: relative; }
-        .hero-img-stack img { width: 100%; border-radius: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+        .about-hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; }
+        .about-hero h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; line-height: 1.1; margin-bottom: 2rem; color: var(--primary-blue-dark); font-weight: 700; }
+        .about-hero p { font-size: 1.2rem; color: #555; margin-bottom: 3rem; max-width: 550px; }
 
-        .mission-vision { padding: 8rem 0; background: var(--bg-cream); }
+        .hero-image-side { position: relative; }
+        .hero-image-side img { width: 100%; border-radius: 60px 20px 60px 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); position: relative; z-index: 2; }
+        .hero-doodle { position: absolute; top: -10%; left: -10%; width: 120%; height: 120%; z-index: 1; opacity: 0.1; }
+
+        /* Floating Stats Card */
+        .stats-floating-card {
+            position: absolute;
+            bottom: -30px;
+            left: -50px;
+            background: white;
+            padding: 2rem;
+            border-radius: 30px;
+            display: flex;
+            gap: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        .stat-mini h4 { font-size: 2.5rem; color: var(--primary-blue); line-height: 1; }
+        .stat-mini p { font-size: 0.9rem; color: #666; margin: 0; }
+
+        /* Mission Vision Cards */
+        .mission-vision { padding: 10rem 0; background: var(--bg-cream); }
         .mv-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; }
-        .mv-card { padding: 4rem; border-radius: 40px; color: white; position: relative; overflow: hidden; }
+        .mv-card { padding: 4.5rem; border-radius: 60px 10px 60px 10px; color: white; position: relative; overflow: hidden; }
         .mv-card.mission { background-color: var(--primary-blue); }
         .mv-card.vision { background-color: var(--accent-gold); }
-        .mv-card h2 { font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 700; }
+        .mv-card h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 2rem; font-weight: 700; }
+        .mv-card p { font-size: 1.15rem; opacity: 0.95; line-height: 1.6; }
+        .mv-doodle { position: absolute; bottom: -20px; right: -20px; width: 150px; opacity: 0.2; transform: rotate(-15deg); }
 
-        .founders-section { padding: 10rem 0; background: white; text-align: center; }
-        .founders-grid { display: flex; justify-content: center; gap: 4rem; max-width: 1000px; margin: 0 auto; }
-        .founder-card { flex: 1; text-align: center; }
-        .founder-img-wrapper { position: relative; margin-bottom: 2.5rem; border-radius: 40px; overflow: hidden; height: 450px; }
-        .founder-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-        .founder-card h3 { font-size: 1.8rem; color: var(--primary-blue-dark); margin-bottom: 0.5rem; font-weight: 700; }
-        .founder-card .role { color: var(--accent-orange); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; }
+        /* Founders Editorial Section */
+        .founders-section { padding: 10rem 0; background: white; position: relative; }
+        .founders-header { text-align: center; margin-bottom: 6rem; }
+        .founders-header h2 { font-family: 'Playfair Display', serif; font-size: 4rem; color: var(--primary-blue-dark); font-weight: 700; }
+        .founders-layout { display: flex; align-items: center; gap: 5rem; }
+        .founder-info { flex: 1; }
+        .founder-tag { display: inline-block; padding: 0.5rem 1.2rem; border: 1.5px solid var(--accent-orange); border-radius: 15px; color: var(--accent-orange); font-weight: 700; font-size: 0.9rem; margin-bottom: 1.5rem; }
+        .founder-info h3 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--primary-blue-dark); margin-bottom: 1.5rem; }
+        .founder-info p { font-size: 1.15rem; color: #444; margin-bottom: 2rem; }
+        
+        .founder-image-side { flex: 0.8; position: relative; }
+        .founder-image-side img { width: 100%; border-radius: 50% 50% 0 0; border: 15px solid var(--bg-cream); box-shadow: 0 30px 60px rgba(0,0,0,0.08); }
+        .founder-blob { position: absolute; bottom: -10%; left: -10%; width: 50%; height: 50%; background: var(--accent-yellow); border-radius: 40px 10px 40px 10px; z-index: -1; }
 
-        .main-footer { background: var(--footer-dark); color: white; padding: 6rem 0 3rem; }
-        .footer-top { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; gap: 4rem; margin-bottom: 4rem; }
-        .footer-logo { height: 70px; background: white; padding: 5px 10px; border-radius: 10px; margin-bottom: 1.5rem; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; }
+        /* Core Values Editorial */
+        .values-section { padding: 8rem 0; background: var(--bg-cream); }
+        .values-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 5rem; color: var(--primary-blue-dark); }
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+        .value-card { background: white; padding: 4rem 3rem; border-radius: 30px; text-align: center; transition: all 0.4s ease; border: 1px solid rgba(0,0,0,0.02); }
+        .value-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .value-card .icon-box { width: 80px; height: 80px; background: var(--bg-cream); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 2.5rem; }
+        .value-card h4 { font-size: 1.6rem; color: var(--primary-blue-dark); margin-bottom: 1.2rem; font-weight: 700; }
+        .value-card p { color: #666; font-size: 1rem; }
+
+        /* Footer */
+        .main-footer { background: var(--footer-dark); color: white; padding: 8rem 0 3rem; }
+        .footer-top { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; gap: 6rem; margin-bottom: 6rem; }
+        .footer-logo { height: 80px; background: white; padding: 8px 15px; border-radius: 15px; margin-bottom: 2rem; }
+        .footer-links h3, .footer-contact-info h3 { font-size: 1.5rem; margin-bottom: 2rem; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 1rem; }
+        .footer-links a { color: white; text-decoration: none; opacity: 0.8; transition: opacity 0.3s; }
+        .footer-links a:hover { opacity: 1; }
+        .footer-contact-info p { margin-bottom: 1.5rem; opacity: 0.8; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 3rem; display: flex; justify-content: space-between; align-items: center; }
+        .social-links { display: flex; gap: 1.5rem; }
+        .social-links svg { width: 24px; height: 24px; fill: white; }
 
         .bottom-nav { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: white; z-index: 1000; padding: 10px 0; border-top: 1px solid #eee; }
         .bottom-nav-container { display: flex; justify-content: space-around; }
@@ -77,8 +127,11 @@
         .floating-btn.call { background: var(--primary-blue); }
 
         @media (max-width: 1024px) {
-            .about-hero-grid, .mv-grid { grid-template-columns: 1fr; }
-            .founders-grid { flex-direction: column; padding: 0 2rem; }
+            .about-hero-grid, .mv-grid, .founders-layout, .values-grid { grid-template-columns: 1fr; display: block; }
+            .founders-layout { text-align: center; }
+            .founder-image-side { margin-top: 4rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+            .footer-top { grid-template-columns: 1fr; gap: 4rem; }
+            .stats-floating-card { position: static; margin-top: 3rem; display: flex; justify-content: center; }
         }
 
         @media (max-width: 768px) {
@@ -86,9 +139,10 @@
             .bottom-nav { display: block; }
             body { padding-bottom: 70px; }
             .floating-contact { bottom: 100px; }
-            .about-hero h1 { font-size: 2.8rem; }
-            .footer-top { grid-template-columns: 1fr; text-align: center; }
-            .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
+            .about-hero h1 { font-size: 3rem; }
+            .mv-card { padding: 3rem; }
+            .mv-card h2, .founder-info h3 { font-size: 2.8rem; }
+            .footer-bottom { flex-direction: column; text-align: center; gap: 1.5rem; }
         }
     </style>
 </head>
@@ -97,7 +151,7 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo"><a href="index.html"><img src="Fortunes Logo.png" alt="Logo"></a></div>
+                <div class="logo"><a href="index.html"><img src="Fortunes Logo.png" alt="Fortunes Logo"></a></div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html" style="color: var(--primary-blue);">About</a></li>
@@ -114,45 +168,90 @@
         <section class="about-hero">
             <div class="container about-hero-grid">
                 <div class="hero-content">
-                    <h1>Nurturing Minds, <span>Inspiring Futures</span></h1>
-                    <p>Established with a vision to revolutionize primary and secondary education in Hyderabad, Fortunes High School combines traditional discipline with modern innovation.</p>
-                    <div class="hero-stats" style="display: flex; gap: 2rem;">
-                        <div><h4 style="font-size: 2.5rem; color: var(--primary-blue);">15+</h4><p>Years of Excellence</p></div>
-                        <div><h4 style="font-size: 2.5rem; color: var(--accent-orange);">1000+</h4><p>Happy Students</p></div>
+                    <h1>Nurturing Minds, <span class="highlight-text">Inspiring</span> <span class="highlight-blue">Futures</span></h1>
+                    <p>Established with a vision to revolutionize education in Hyderabad, Fortunes High School combines traditional discipline with modern innovation to build future leaders.</p>
+                    <div class="hero-btns" style="display: flex; gap: 1.5rem;">
+                        <a href="index.html#contact" class="btn btn-primary">Our Story ↘</a>
+                        <a href="gallery.html" class="btn" style="border: 1.5px solid #ddd;">Explore Campus</a>
                     </div>
                 </div>
-                <div class="hero-img-stack">
-                    <img src="Boy_and_girl_studying_202604292134.png" alt="Students studying" loading="lazy">
+                <div class="hero-image-side">
+                    <svg class="hero-doodle" viewBox="0 0 500 500"><path d="M50,250 Q100,50 250,50 T450,250 T250,450 T50,250" fill="none" stroke="var(--secondary-blue)" stroke-width="2" stroke-dasharray="10,10"/></svg>
+                    <img src="Boy_and_girl_studying_202604292134.png" alt="Fortunes Students" loading="lazy">
+                    
+                    <div class="stats-floating-card">
+                        <div class="stat-mini">
+                            <h4>15+</h4>
+                            <p>Years of<br>Excellence</p>
+                        </div>
+                        <div class="stat-mini">
+                            <h4>1000+</h4>
+                            <p>Happy<br>Students</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="mission-vision">
-            <div class="container mv-grid">
-                <div class="mv-card mission">
-                    <h2>Our Mission</h2>
-                    <p>To provide a safe, nurturing, and challenging environment where students are empowered to reach their full potential academically, socially, and emotionally.</p>
-                </div>
-                <div class="mv-card vision">
-                    <h2>Our Vision</h2>
-                    <p>To be a premier institution recognized for producing future leaders who are compassionate, creative, and critical thinkers ready to impact the world.</p>
+            <div class="container">
+                <div class="mv-grid">
+                    <div class="mv-card mission">
+                        <svg class="mv-doodle" viewBox="0 0 100 100"><path d="M10,50 L90,50 M50,10 L50,90" stroke="white" stroke-width="2" opacity="0.3"/></svg>
+                        <h2>Our Mission</h2>
+                        <p>To provide a safe, nurturing, and challenging environment where students are empowered to reach their full potential academically, socially, and emotionally through PMP-based learning.</p>
+                    </div>
+                    <div class="mv-card vision">
+                        <svg class="mv-doodle" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" stroke="white" stroke-width="2" opacity="0.3" fill="none"/></svg>
+                        <h2>Our Vision</h2>
+                        <p>To be a premier educational institution recognized for producing future leaders who are compassionate, creative, and critical thinkers ready to impact the global stage.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="founders-section">
             <div class="container">
-                <div class="section-header" style="margin-bottom: 4rem;">
-                    <h2 style="font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--primary-blue-dark);">The Visionaries <span>Behind Fortunes</span></h2>
+                <div class="founders-layout">
+                    <div class="founder-info">
+                        <span class="founder-tag">The Visionary</span>
+                        <h3>Dedicated to <span>Excellence</span></h3>
+                        <p>Fortunes High School was founded on the principle that every child deserves an education that nurtures their natural curiosity and builds their confidence.</p>
+                        <p>Our founder, <strong>Smt. K. Anitha</strong>, has dedicated over two decades to creating an environment where learning is a joy and every student is given the individual attention they need to soar.</p>
+                        <a href="index.html#contact" class="btn btn-primary" style="background: var(--accent-orange); border: none;">Message from Chairperson</a>
+                    </div>
+                    <div class="founder-image-side">
+                        <div class="founder-blob"></div>
+                        <img src="mom nd boy.png" alt="Chairperson Smt. K. Anitha" loading="lazy">
+                    </div>
                 </div>
-                <div class="founders-grid">
-                    <div class="founder-card">
-                        <div class="founder-img-wrapper">
-                            <img src="mom nd boy.png" alt="Founder" loading="lazy">
+            </div>
+        </section>
+
+        <section class="values-section">
+            <div class="container">
+                <h2 class="values-title">Values That <span>Define Us</span></h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="icon-box">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--primary-blue)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                         </div>
-                        <h3>Smt. K. Anitha</h3>
-                        <div class="role">Chairperson & Founder</div>
-                        <p style="margin-top: 1rem; color: #666;">A legacy of passion for education and commitment to excellence.</p>
+                        <h4>Integrity</h4>
+                        <p>We foster a culture of honesty, ethics, and responsibility in every student, building a foundation of trust.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="icon-box">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h4>Innovation</h4>
+                        <p>Embracing modern technology and creative teaching methods like PMP to prepare kids for the digital age.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="icon-box">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+                        </div>
+                        <h4>Inclusion</h4>
+                        <p>Celebrating diversity and ensuring every child, regardless of their background, feels valued and supported.</p>
                     </div>
                 </div>
             </div>
@@ -163,26 +262,32 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="Fortunes Logo.png" alt="Logo" class="footer-logo">
-                    <p>Empowering students with holistic education.</p>
+                    <img src="Fortunes Logo.png" alt="Fortunes Logo" class="footer-logo">
+                    <p>Empowering students with holistic education and Positive Mind Programming (PMP).</p>
+                    <div class="social-links" style="margin-top: 2rem;">
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                    </div>
                 </div>
                 <div class="footer-links">
-                    <h3>Links</h3>
+                    <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact-info">
-                    <h3>Contact</h3>
-                    <p>Tilak Nagar, Hyderabad</p>
+                    <h3>Contact Info</h3>
+                    <p># 2-2-1164/1/4/A/1, Near Kishanrao Hospital, Tilak Nagar, Hyderabad</p>
                     <p>+91 73311 33394</p>
+                    <p>srikakatiya227@gmail.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 Fortunes High School</p>
-                <p>Powered by UPliv</p>
+                <p>© 2024 - 2026 Fortunes High School. All rights reserved.</p>
+                <p>Powered by <a href="https://www.theupliv.com" target="_blank" style="color: white;">UPliv</a></p>
             </div>
         </div>
     </footer>
@@ -209,8 +314,13 @@
     </nav>
 
     <div class="floating-contact">
-        <a href="tel:+917331133394" class="floating-btn call"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27 11.72 11.72 0 0 0 .58 3.67 1 1 0 0 1-.27 1.11l-2.2 2.2z"/></svg></a>
-        <a href="https://wa.me/917331133394" class="floating-btn whatsapp"><svg viewBox="0 0 24 24"><path d="M12.031 2C6.446 2 1.921 6.46 1.921 11.94c0 1.76.463 3.42 1.29 4.88l-1.12 4.09 4.22-1.1c1.39.75 2.97 1.18 4.67 1.18 5.58 0 10.11-4.46 10.11-9.94S17.611 2 12.031 2z"/></svg></a>
+        <a href="tel:+917331133394" class="floating-btn call" aria-label="Call Us">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27 11.72 11.72 0 0 0 .58 3.67 1 1 0 0 1-.27 1.11l-2.2 2.2z"/></svg>
+        </a>
+        <a href="https://wa.me/917331133394" target="_blank" class="floating-btn whatsapp" aria-label="WhatsApp Us">
+            <svg viewBox="0 0 24 24"><path d="M12.031 2C6.446 2 1.921 6.46 1.921 11.94c0 1.76.463 3.42 1.29 4.88l-1.12 4.09 4.22-1.1c1.39.75 2.97 1.18 4.67 1.18 5.58 0 10.11-4.46 10.11-9.94S17.611 2 12.031 2z"/></svg>
+        </a>
     </div>
 </body>
-</html>
+
+</html>>
