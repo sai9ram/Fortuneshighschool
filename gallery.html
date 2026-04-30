@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Fortunes High School | Empowering Future Leaders</title>
-    <meta name="description" content="Learn about the history, mission, and founders of Fortunes High School. Our commitment to holistic education and student excellence in Hyderabad.">
+    <title>Gallery | Fortunes High School Hyderabad</title>
+    <meta name="description" content="Explore the vibrant life at Fortunes High School. Photos and videos of our campus, students, and activities.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
@@ -20,12 +20,12 @@
             --accent-orange: #FF5C35;
             --text-dark: #1A1A1A;
             --white: #FFFFFF;
-            --footer-dark: #001A2E;
             --container-width: 1200px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-cream); color: var(--text-dark); overflow-x: hidden; line-height: 1.6; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-cream); color: var(--text-dark); overflow-x: hidden; }
+
         .container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; }
 
         header { padding: 1.5rem 0; background: white; box-shadow: 0 2px 20px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
@@ -34,33 +34,22 @@
         .nav-links { display: flex; list-style: none; gap: 2.5rem; }
         .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; transition: color 0.3s; }
         .nav-links a:hover { color: var(--primary-blue); }
-        .btn { padding: 0.8rem 1.8rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; display: inline-block; }
+        .btn { padding: 0.8rem 1.8rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; }
         .btn-primary { background: var(--primary-blue); color: white; }
 
-        .about-hero { padding: 8rem 0; background: white; position: relative; overflow: hidden; }
-        .about-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        .about-hero h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; line-height: 1.1; margin-bottom: 2rem; color: var(--primary-blue-dark); }
-        .about-hero h1 span { color: var(--accent-orange); font-style: italic; }
-        .about-hero p { font-size: 1.2rem; color: #555; margin-bottom: 2.5rem; }
-        .hero-img-stack { position: relative; }
-        .hero-img-stack img { width: 100%; border-radius: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+        .gallery-hero { padding: 6rem 0; text-align: center; background: white; }
+        .gallery-hero h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 1.5rem; }
+        .gallery-hero p { font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto; }
 
-        .mission-vision { padding: 8rem 0; background: var(--bg-cream); }
-        .mv-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; }
-        .mv-card { padding: 4rem; border-radius: 40px; color: white; position: relative; overflow: hidden; }
-        .mv-card.mission { background-color: var(--primary-blue); }
-        .mv-card.vision { background-color: var(--accent-gold); }
-        .mv-card h2 { font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 700; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 6rem; padding: 4rem 0; }
+        .gallery-item { border-radius: 20px; overflow: hidden; position: relative; aspect-ratio: 4/3; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .gallery-item img, .gallery-item video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .gallery-item:hover img, .gallery-item:hover video { transform: scale(1.1); }
+        
+        .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; pointer-events: none; }
+        .play-icon { width: 60px; height: 60px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
 
-        .founders-section { padding: 10rem 0; background: white; text-align: center; }
-        .founders-grid { display: flex; justify-content: center; gap: 4rem; max-width: 1000px; margin: 0 auto; }
-        .founder-card { flex: 1; text-align: center; }
-        .founder-img-wrapper { position: relative; margin-bottom: 2.5rem; border-radius: 40px; overflow: hidden; height: 450px; }
-        .founder-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-        .founder-card h3 { font-size: 1.8rem; color: var(--primary-blue-dark); margin-bottom: 0.5rem; font-weight: 700; }
-        .founder-card .role { color: var(--accent-orange); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; }
-
-        .main-footer { background: var(--footer-dark); color: white; padding: 6rem 0 3rem; }
+        .main-footer { background: #001A2E; color: white; padding: 6rem 0 3rem; }
         .footer-top { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; gap: 4rem; margin-bottom: 4rem; }
         .footer-logo { height: 70px; background: white; padding: 5px 10px; border-radius: 10px; margin-bottom: 1.5rem; }
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; }
@@ -76,20 +65,20 @@
         .floating-btn.whatsapp { background: #25D366; }
         .floating-btn.call { background: var(--primary-blue); }
 
-        @media (max-width: 1024px) {
-            .about-hero-grid, .mv-grid { grid-template-columns: 1fr; }
-            .founders-grid { flex-direction: column; padding: 0 2rem; }
-        }
-
         @media (max-width: 768px) {
             .nav-links, header .btn { display: none; }
             .bottom-nav { display: block; }
             body { padding-bottom: 70px; }
             .floating-contact { bottom: 100px; }
-            .about-hero h1 { font-size: 2.8rem; }
-            .footer-top { grid-template-columns: 1fr; text-align: center; }
+            .gallery-hero h1 { font-size: 2.5rem; }
+            .footer-top { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
             .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
         }
+
+        .video-modal { display: none; position: fixed; z-index: 99999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); align-items: center; justify-content: center; backdrop-filter: blur(10px); }
+        .modal-content { position: relative; width: 90%; max-width: 1000px; }
+        .modal-content video { width: 100%; border-radius: 20px; }
+        .close-modal { position: absolute; top: -50px; right: 0; color: white; font-size: 40px; cursor: pointer; }
     </style>
 </head>
 
@@ -100,9 +89,9 @@
                 <div class="logo"><a href="index.html"><img src="Fortunes Logo.png" alt="Logo"></a></div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" style="color: var(--primary-blue);">About</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="index.html#academics">Academics</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="gallery.html" style="color: var(--primary-blue);">Gallery</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
                 <a href="index.html#contact" class="btn btn-primary">Book a Tour</a>
@@ -111,50 +100,36 @@
     </header>
 
     <main>
-        <section class="about-hero">
-            <div class="container about-hero-grid">
-                <div class="hero-content">
-                    <h1>Nurturing Minds, <span>Inspiring Futures</span></h1>
-                    <p>Established with a vision to revolutionize primary and secondary education in Hyderabad, Fortunes High School combines traditional discipline with modern innovation.</p>
-                    <div class="hero-stats" style="display: flex; gap: 2rem;">
-                        <div><h4 style="font-size: 2.5rem; color: var(--primary-blue);">15+</h4><p>Years of Excellence</p></div>
-                        <div><h4 style="font-size: 2.5rem; color: var(--accent-orange);">1000+</h4><p>Happy Students</p></div>
-                    </div>
-                </div>
-                <div class="hero-img-stack">
-                    <img src="Boy_and_girl_studying_202604292134.png" alt="Students studying" loading="lazy">
-                </div>
-            </div>
-        </section>
-
-        <section class="mission-vision">
-            <div class="container mv-grid">
-                <div class="mv-card mission">
-                    <h2>Our Mission</h2>
-                    <p>To provide a safe, nurturing, and challenging environment where students are empowered to reach their full potential academically, socially, and emotionally.</p>
-                </div>
-                <div class="mv-card vision">
-                    <h2>Our Vision</h2>
-                    <p>To be a premier institution recognized for producing future leaders who are compassionate, creative, and critical thinkers ready to impact the world.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="founders-section">
+        <section class="gallery-hero">
             <div class="container">
-                <div class="section-header" style="margin-bottom: 4rem;">
-                    <h2 style="font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--primary-blue-dark);">The Visionaries <span>Behind Fortunes</span></h2>
+                <h1>Our <span style="color: var(--accent-orange);">Fortunes</span> Gallery</h1>
+                <p>Capturing the essence of learning, growth, and joy at Fortunes High School.</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="img.1.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item"><img src="img.2.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item"><img src="img.3.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item">
+                    <video src="video.1.mp4" muted loop></video>
+                    <div class="video-overlay"><div class="play-icon">▶</div></div>
                 </div>
-                <div class="founders-grid">
-                    <div class="founder-card">
-                        <div class="founder-img-wrapper">
-                            <img src="mom nd boy.png" alt="Founder" loading="lazy">
-                        </div>
-                        <h3>Smt. K. Anitha</h3>
-                        <div class="role">Chairperson & Founder</div>
-                        <p style="margin-top: 1rem; color: #666;">A legacy of passion for education and commitment to excellence.</p>
-                    </div>
+                <div class="gallery-item"><img src="img.4.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item"><img src="img.5.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item">
+                    <video src="video.2.mp4" muted loop></video>
+                    <div class="video-overlay"><div class="play-icon">▶</div></div>
                 </div>
+                <div class="gallery-item"><img src="img.6.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item"><img src="img.7.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item"><img src="img.8.jpeg" alt="School Life" loading="lazy"></div>
+                <div class="gallery-item">
+                    <video src="video.3.mp4" muted loop></video>
+                    <div class="video-overlay"><div class="play-icon">▶</div></div>
+                </div>
+                <div class="gallery-item"><img src="img.9.jpeg" alt="School Life" loading="lazy"></div>
             </div>
         </section>
     </main>
@@ -193,11 +168,11 @@
                 <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                 <span>Home</span>
             </a>
-            <a href="about.html" class="bottom-nav-item active">
+            <a href="about.html" class="bottom-nav-item">
                 <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
                 <span>About</span>
             </a>
-            <a href="gallery.html" class="bottom-nav-item">
+            <a href="gallery.html" class="bottom-nav-item active">
                 <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
                 <span>Gallery</span>
             </a>
@@ -209,8 +184,41 @@
     </nav>
 
     <div class="floating-contact">
-        <a href="tel:+917331133394" class="floating-btn call"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27 11.72 11.72 0 0 0 .58 3.67 1 1 0 0 1-.27 1.11l-2.2 2.2z"/></svg></a>
+        <a href="tel:+917331133394" class="floating-btn call"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27 11.72 11.72 0 0 0 3.67.58 1 1 0 0 1 1 1v3.59a1 1 0 0 1-1 1A16 16 0 0 1 3 4a1 1 0 0 1 1-1h3.59a1 1 0 0 1 1 1 11.72 11.72 0 0 0 .58 3.67 1 1 0 0 1-.27 1.11l-2.2 2.2z"/></svg></a>
         <a href="https://wa.me/917331133394" class="floating-btn whatsapp"><svg viewBox="0 0 24 24"><path d="M12.031 2C6.446 2 1.921 6.46 1.921 11.94c0 1.76.463 3.42 1.29 4.88l-1.12 4.09 4.22-1.1c1.39.75 2.97 1.18 4.67 1.18 5.58 0 10.11-4.46 10.11-9.94S17.611 2 12.031 2z"/></svg></a>
     </div>
+
+    <div id="videoModal" class="video-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <video id="modalVideo" controls></video>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.gallery-item');
+            const modal = document.getElementById('videoModal');
+            const modalVideo = document.getElementById('modalVideo');
+            const closeModal = document.querySelector('.close-modal');
+            items.forEach(item => {
+                const video = item.querySelector('video');
+                if (video) {
+                    item.addEventListener('click', () => {
+                        modalVideo.src = video.src;
+                        modal.style.display = 'flex';
+                        modalVideo.play();
+                    });
+                }
+            });
+            const closeFunc = () => {
+                modal.style.display = 'none';
+                modalVideo.pause();
+                modalVideo.src = "";
+            };
+            closeModal.addEventListener('click', closeFunc);
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeFunc(); });
+        });
+    </script>
 </body>
 </html>
