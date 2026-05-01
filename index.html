@@ -1942,14 +1942,28 @@
         }
 
         @media (max-width: 600px) {
-
             .admission-form-card,
             .contact-info-card {
-                padding: 2.5rem 1.5rem;
+                padding: 2rem 1.25rem;
             }
 
             .admission-form-card h2 {
-                font-size: 2.2rem;
+                font-size: 1.8rem;
+                line-height: 1.2;
+            }
+
+            .contact-title {
+                font-size: 1.8rem;
+            }
+
+            .form-group {
+                margin-bottom: 1rem;
+            }
+
+            .curriculum-highlights {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding-top: 2rem;
             }
         }
 
@@ -2188,7 +2202,7 @@
             }
 
             .admission-form-card {
-                padding: 2rem 1.5rem !important;
+                padding: 2rem 1.25rem !important;
             }
 
             form div[style*="grid-template-columns: 1fr 1fr"] {
@@ -2381,9 +2395,9 @@
 
         @media (max-width: 768px) {
             .floating-contact {
-                bottom: 100px;
-                /* Above the bottom nav */
-                right: 20px;
+                bottom: 110px;
+                /* Higher up to avoid bottom nav and overlap */
+                right: 15px;
             }
 
             .floating-btn {
