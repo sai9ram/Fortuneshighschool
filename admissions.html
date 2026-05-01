@@ -13,6 +13,10 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/png" href="Fortunes Logo.png">
+    
+    <!-- Resource Hints -->
+    <link rel="preload" as="image" href="Fortunes Logo.png">
+    <link rel="preload" as="image" href="hero_students.png" fetchpriority="high">
     <style>
         :root {
             --bg-cream: #F8FBFF;
@@ -910,7 +914,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <a href="index.html"><img src="Fortunes Logo.png" alt="Fortunes High School Logo"></a>
+                    <a href="index.html"><img src="Fortunes Logo.png" alt="Fortunes High School Logo" fetchpriority="high" decoding="async" width="180" height="60"></a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -948,7 +952,7 @@
                 <div class="hero-image">
                     <div class="blob blob-1"></div>
                     <div class="blob blob-2"></div>
-                    <img src="hero_students.png" alt="Happy school students at Fortunes High School">
+                    <img src="hero_students.png" alt="Happy school students at Fortunes High School" fetchpriority="high" decoding="async">
 
                     <!-- Doodles -->
                     <svg class="doodle doodle-arrow" width="80" height="80" viewBox="0 0 80 80">
@@ -1001,7 +1005,7 @@
                 </div>
                 <div class="classes-grid">
                     <div class="class-box">
-                        <img src="primary_students.png" alt="Nursery - UKG" class="class-image">
+                        <img src="primary_students.png" alt="Nursery - UKG" class="class-image" loading="lazy" decoding="async">
                         <div class="class-content">
                             <h3>Nursery – UKG</h3>
                             <p>Activity-based learning designed to spark curiosity and joy in early childhood
@@ -1009,7 +1013,7 @@
                         </div>
                     </div>
                     <div class="class-box">
-                        <img src="Boy_and_girl_studying_202604292134.png" alt="1st - 5th Class" class="class-image">
+                        <img src="Boy_and_girl_studying_202604292134.png" alt="1st - 5th Class" class="class-image" loading="lazy" decoding="async">
                         <div class="class-content">
                             <h3>1st – 5th Class</h3>
                             <p>Integrated syllabus focusing on foundational literacy, numeracy, and life skills for
@@ -1018,7 +1022,7 @@
                         </div>
                     </div>
                     <div class="class-box">
-                        <img src="secondary_students.png" alt="6th - 10th Class" class="class-image">
+                        <img src="secondary_students.png" alt="6th - 10th Class" class="class-image" loading="lazy" decoding="async">
                         <div class="class-content">
                             <h3>6th – 10th Class</h3>
                             <p>SSC syllabus with a strong emphasis on academic excellence, discipline, and holistic
@@ -1160,7 +1164,7 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="Fortunes Logo.png" alt="Fortunes High School" class="footer-logo">
+                    <img src="Fortunes Logo.png" alt="Fortunes High School" class="footer-logo" loading="lazy" decoding="async" width="180" height="60">
                     <p>Empowering students with holistic education and Positive Mind Programming (PMP) for a successful
                         future.</p>
                     <div class="social-links">

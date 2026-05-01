@@ -32,6 +32,10 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/png" href="Fortunes Logo.png">
+    
+    <!-- Resource Hints -->
+    <link rel="preload" as="image" href="Fortunes Logo.png">
+    <link rel="preload" as="image" href="img45.png" fetchpriority="high">
     <style>
         :root {
             --bg-cream: #F8FBFF;
@@ -2531,7 +2535,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <a href="index.html"><img src="Fortunes Logo.png" alt="Fortunes High School Logo"></a>
+                    <a href="index.html"><img src="Fortunes Logo.png" alt="Fortunes High School Logo" fetchpriority="high" decoding="async" width="180" height="60"></a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Home</a></li>
@@ -2569,7 +2573,7 @@
                 <div class="hero-image">
                     <div class="blob blob-1"></div>
                     <div class="blob blob-2"></div>
-                    <img src="img45.png" alt="Happy school students">
+                    <img src="img45.png" alt="Happy school students" fetchpriority="high" decoding="async">
 
                     <!-- Doodles -->
                     <svg class="doodle doodle-arrow" width="80" height="80" viewBox="0 0 80 80">
@@ -2609,7 +2613,7 @@
                             <path d="M0,50 Q50,50 50,0" stroke-width="4" />
                         </svg>
                         <h4>Life Skills for Kids</h4>
-                        <img src="littleboy.png" alt="Boy with skateboard" class="card-image">
+                        <img src="littleboy.png" alt="Boy with skateboard" class="card-image" loading="lazy" decoding="async">
                         <div class="card-arrow">
                             <svg viewBox="0 0 24 24">
                                 <path d="M5 12h14m-7-7l7 7-7 7" />
@@ -2630,7 +2634,7 @@
                         </svg>
                         <h4>Interactive Learning</h4>
                         <img src="Little_girl_talking_smiling_202604292238.png" alt="Girl with laptop"
-                            class="card-image">
+                            class="card-image" loading="lazy" decoding="async">
                         <div class="card-arrow">
                             <svg viewBox="0 0 24 24">
                                 <path d="M5 12h14m-7-7l7 7-7 7" />
@@ -2650,7 +2654,7 @@
                             <path d="M50,100 Q50,50 100,50" stroke-width="4" />
                         </svg>
                         <h4>Grow your own wings</h4>
-                        <img src="mom nd boy.png" alt="Student groups" class="card-image">
+                        <img src="mom nd boy.png" alt="Student groups" class="card-image" loading="lazy" decoding="async">
                         <div class="card-arrow">
                             <svg viewBox="0 0 24 24">
                                 <path d="M5 12h14m-7-7l7 7-7 7" />
@@ -2677,19 +2681,19 @@
                 </div>
                 <div class="why-cards">
                     <div class="why-card">
-                        <img src="Govt recognized.png" alt="Govt Recognized Excellence" loading="lazy">
+                        <img src="Govt recognized.png" alt="Govt Recognized Excellence" loading="lazy" decoding="async">
                         <h3>Govt. Recognized</h3>
                         <p>Officially recognized by the government, ensuring high educational standards and credibility
                             for your child's future.</p>
                     </div>
                     <div class="why-card">
-                        <img src="primary_students.1.png" alt="Balanced Development" loading="lazy">
+                        <img src="primary_students.1.png" alt="Balanced Development" loading="lazy" decoding="async">
                         <h3>Balanced Excellence</h3>
                         <p>A perfect harmony between academic rigor and creative extracurricular activities for a
                             well-rounded development.</p>
                     </div>
                     <div class="why-card">
-                        <img src="secondary_students.png" alt="Discipline and Innovation" loading="lazy">
+                        <img src="secondary_students.png" alt="Discipline and Innovation" loading="lazy" decoding="async">
                         <h3>Discipline & Innovation</h3>
                         <p>Fostering a culture of discipline while encouraging innovative thinking through technology
                             and modern teaching methods.</p>
@@ -2744,7 +2748,7 @@
                                     fill="none" stroke="#49B3E3" stroke-width="3" stroke-dasharray="10 5" />
                             </svg>
                             <img src="Boy_doing_sketches_black_background_202604292249 - 29-04-2026 22-57-08.png"
-                                alt="Pre School">
+                                alt="Pre School" loading="lazy" decoding="async">
                         </div>
                         <h3>Letter Identification</h3>
                         <p>Class - Pre School</p>
@@ -2761,7 +2765,7 @@
                                     d="M60,30 C100,10 140,30 160,70 C180,110 160,150 120,165 C80,180 40,160 25,120 C10,80 20,40 60,30"
                                     fill="none" stroke="#FF8A4C" stroke-width="3" stroke-dasharray="10 5" />
                             </svg>
-                            <img src="a_little_boy_keeping_a_202604292247.png" alt="General Knowledge">
+                            <img src="a_little_boy_keeping_a_202604292247.png" alt="General Knowledge" loading="lazy" decoding="async">
                         </div>
                         <h3>Geography Quiz</h3>
                         <p>First Grade</p>
@@ -2778,7 +2782,7 @@
                                     d="M40,70 C40,30 100,20 140,40 C180,60 180,120 160,150 C140,180 80,180 50,160 C20,140 40,110 40,70"
                                     fill="none" stroke="#228B45" stroke-width="3" stroke-dasharray="10 5" />
                             </svg>
-                            <img src="Girl_studying_book_black_background_202604292245.png" alt="Geography Quiz">
+                            <img src="Girl_studying_book_black_background_202604292245.png" alt="Geography Quiz" loading="lazy" decoding="async">
                         </div>
                         <h3>General Knowledge</h3>
                         <p>Fourth Grade</p>
@@ -2795,7 +2799,7 @@
                                     d="M100,35 C150,35 180,75 180,110 C180,145 140,180 100,180 C60,180 20,145 20,110 C20,75 50,35 100,35"
                                     fill="none" stroke="#FABE00" stroke-width="3" stroke-dasharray="10 5" />
                             </svg>
-                            <img src="Little_girl_talking_smiling_202604292238.png" alt="Visual Arts">
+                            <img src="Little_girl_talking_smiling_202604292238.png" alt="Visual Arts" loading="lazy" decoding="async">
                         </div>
                         <h3>visual Arts Training</h3>
                         <p>Sketching class</p>
@@ -2816,7 +2820,7 @@
                                 the Hyderabad education landscape.</p>
                         </div>
                         <div class="image-wrapper">
-                            <img src="primary_students.png" alt="Primary students studying">
+                            <img src="primary_students.png" alt="Primary students studying" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <div class="curriculum-card teal">
@@ -2826,7 +2830,7 @@
                                 beyond.</p>
                         </div>
                         <div class="image-wrapper">
-                            <img src="secondary_students.png" alt="Secondary students studying">
+                            <img src="secondary_students.png" alt="Secondary students studying" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -2865,7 +2869,7 @@
                 </h2>
                 <div class="gallery-grid">
                     <div class="gallery-item">
-                        <video src="video.1.mp4" autoplay muted loop playsinline class="gallery-video"></video>
+                        <video src="video.1.mp4" autoplay muted loop playsinline preload="metadata" class="gallery-video"></video>
                         <div class="video-overlay">
                             <div class="play-btn">
                                 <svg viewBox="0 0 24 24">
@@ -2875,7 +2879,7 @@
                         </div>
                     </div>
                     <div class="gallery-item">
-                        <video src="video.2.mp4" autoplay muted loop playsinline class="gallery-video"></video>
+                        <video src="video.2.mp4" autoplay muted loop playsinline preload="metadata" class="gallery-video"></video>
                         <div class="video-overlay">
                             <div class="play-btn">
                                 <svg viewBox="0 0 24 24">
@@ -2886,7 +2890,7 @@
                     </div>
                     <!-- Video 1 -->
                     <div class="gallery-item">
-                        <video src="video.3.mp4" autoplay muted loop playsinline class="gallery-video"></video>
+                        <video src="video.3.mp4" autoplay muted loop playsinline preload="metadata" class="gallery-video"></video>
                         <div class="video-overlay">
                             <div class="play-btn">
                                 <svg viewBox="0 0 24 24">
@@ -2897,7 +2901,7 @@
                     </div>
                     <!-- Video 2 -->
                     <div class="gallery-item">
-                        <video src="video.4.mp4" autoplay muted loop playsinline class="gallery-video"></video>
+                        <video src="video.4.mp4" autoplay muted loop playsinline preload="metadata" class="gallery-video"></video>
                         <div class="video-overlay">
                             <div class="play-btn">
                                 <svg viewBox="0 0 24 24">
@@ -2921,37 +2925,37 @@
             <div class="marquee-container">
                 <div class="image-marquee-track">
                     <!-- Images 1-15 -->
-                    <div class="image-marquee-item"><img src="img.1.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.2.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.3.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.4.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.5.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.6.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.7.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.8.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.9.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.10.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.11.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.12.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.13.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.14.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.15.jpeg" alt="Campus Life"></div>
+                    <div class="image-marquee-item"><img src="img.1.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.2.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.3.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.4.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.5.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.6.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.7.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.8.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.9.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.10.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.11.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.12.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.13.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.14.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.15.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
                     <!-- Duplicate for seamless loop -->
-                    <div class="image-marquee-item"><img src="img.1.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.2.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.3.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.4.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.5.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.6.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.7.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.8.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.9.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.10.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.11.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.12.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.13.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.14.jpeg" alt="Campus Life"></div>
-                    <div class="image-marquee-item"><img src="img.15.jpeg" alt="Campus Life"></div>
+                    <div class="image-marquee-item"><img src="img.1.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.2.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.3.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.4.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.5.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.6.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.7.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.8.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.9.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.10.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.11.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.12.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.13.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.14.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
+                    <div class="image-marquee-item"><img src="img.15.jpeg" alt="Campus Life" loading="lazy" decoding="async"></div>
                 </div>
             </div>
         </section>
@@ -2974,7 +2978,7 @@
                     <a href="#" class="btn-white-round">Book Now ↗</a>
 
                     <!-- Boy Overlapping Card -->
-                    <img src="littleboy.png" alt="Boy with books" class="boy-with-books">
+                    <img src="littleboy.png" alt="Boy with books" class="boy-with-books" loading="lazy" decoding="async">
                 </div>
 
                 <!-- Orange Card -->
@@ -3354,7 +3358,7 @@
                 <div class="empower-image-side">
                     <div class="blue-blob"></div>
                     <!-- Girl Image -->
-                    <img src="6th_class_girl_standing_sports_202604292131.png" alt="Student with book" class="girl-img">
+                    <img src="6th_class_girl_standing_sports_202604292131.png" alt="Student with book" class="girl-img" loading="lazy" decoding="async">
 
                     <!-- Heart Badge -->
                     <div class="heart-badge">
@@ -3428,7 +3432,7 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="Fortunes Logo.png" alt="Fortunes High School Logo" class="footer-logo">
+                    <img src="Fortunes Logo.png" alt="Fortunes High School Logo" class="footer-logo" loading="lazy" decoding="async" width="180" height="60">
                     <p>Empowering students with holistic education and Positive Mind Programming (PMP) for a successful
                         future.</p>
                     <div class="social-links">

@@ -25,6 +25,10 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/png" href="Fortunes Logo.png">
+    
+    <!-- Resource Hints -->
+    <link rel="preload" as="image" href="Fortunes Logo.png">
+    <link rel="preload" as="image" href="hero_students.png" fetchpriority="high">
 
     <style>
         :root {
@@ -839,7 +843,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <a href="index.html"><img src="Fortunes Logo.png" alt="Fortunes High School Logo"></a>
+                    <a href="index.html"><img src="Fortunes Logo.png" alt="Fortunes High School Logo" fetchpriority="high" decoding="async" width="180" height="60"></a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -873,7 +877,7 @@
             <div class="container">
                 <div class="overview-grid">
                     <div class="overview-image">
-                        <img src="img.25.jpeg" alt="Students studying">
+                        <img src="img.25.jpeg" alt="Students studying" loading="lazy" decoding="async">
                     </div>
                     <div class="overview-text">
                         <h2 class="playfair">Our Academic Approach</h2>
@@ -897,7 +901,7 @@
                 <div class="pre-primary-intro">
                     <div class="pre-primary-image">
                         <div class="blob-bg"></div>
-                        <img src="littleboy.png" alt="Happy student">
+                        <img src="littleboy.png" alt="Happy student" loading="lazy" decoding="async">
                     </div>
                     <div class="pre-primary-text">
                         <h2 class="playfair">Pre-Primary Education (Nursery to UKG)</h2>
@@ -964,7 +968,7 @@
             <div class="container">
                 <div class="row-grid">
                     <div class="image-side">
-                        <img src="primary_students.png" alt="Primary students">
+                        <img src="primary_students.png" alt="Primary students" loading="lazy" decoding="async">
                     </div>
                     <div class="text-side">
                         <h2 class="playfair">Primary Education (1st to 5th Class)</h2>
@@ -986,7 +990,7 @@
             <div class="container">
                 <div class="row-grid reverse">
                     <div class="image-side">
-                        <img src="secondary_students.png" alt="High school students">
+                        <img src="secondary_students.png" alt="High school students" loading="lazy" decoding="async">
                     </div>
                     <div class="text-side">
                         <h2 class="playfair">High School (6th to 10th Class)</h2>
@@ -1077,7 +1081,7 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="Fortunes Logo.png" alt="Fortunes High School" class="footer-logo">
+                    <img src="Fortunes Logo.png" alt="Fortunes High School" class="footer-logo" loading="lazy" decoding="async" width="180" height="60">
                     <p>Empowering students with holistic education and Positive Mind Programming (PMP) for a successful
                         future.</p>
                     <div class="social-links">

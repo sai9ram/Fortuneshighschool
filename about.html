@@ -32,6 +32,10 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/png" href="Fortunes Logo.png">
+    
+    <!-- Resource Hints -->
+    <link rel="preload" as="image" href="Fortunes Logo.png">
+    <link rel="preload" as="image" href="img34.jpeg" fetchpriority="high">
     <style>
         :root {
             --bg-cream: #F8FBFF;
@@ -2272,7 +2276,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <a href="index.html"><img src="Fortunes Logo.png" alt="Fortunes High School Logo"></a>
+                    <a href="index.html"><img src="Fortunes Logo.png" alt="Fortunes High School Logo" fetchpriority="high" decoding="async" width="180" height="60"></a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -2310,7 +2314,7 @@
                 </div>
                 <div class="hero-image">
                     <div class="blob blob-blue"></div>
-                    <img src="img34.jpeg" alt="Fortunes High School Students">
+                    <img src="img34.jpeg" alt="Fortunes High School Students" fetchpriority="high" decoding="async">
                 </div>
             </div>
         </section>
@@ -2320,7 +2324,7 @@
             <div class="container">
                 <div class="principal-grid">
                     <div class="principal-image-wrapper">
-                        <img src="principal_madhuri.jpg" alt="Mrs. K. Madhuri - Principal of Fortunes High School">
+                        <img src="principal_madhuri.jpg" alt="Mrs. K. Madhuri - Principal of Fortunes High School" loading="lazy" decoding="async">
                         <div class="principal-badge">Principal</div>
                     </div>
                     <div class="principal-content">
@@ -2341,7 +2345,7 @@
             <div class="container intro-grid">
                 <div class="intro-image-side">
                     <div class="blue-blob"></div>
-                    <img src="primary_students.png" alt="Happy Students">
+                    <img src="primary_students.png" alt="Happy Students" loading="lazy" decoding="async">
                 </div>
                 <div class="intro-text">
                     <h2 class="playfair">Welcome to Fortunes High School</h2>
@@ -2380,7 +2384,7 @@
                         </div>
                     </div>
                     <div class="vm-image-side">
-                        <img src="img42.jpeg" alt="Empowering Education" class="vm-main-img">
+                        <img src="img42.jpeg" alt="Empowering Education" class="vm-main-img" loading="lazy" decoding="async">
                         <div class="vm-floating-element">
                             <h4>Why We Exist</h4>
                             <p>Our goal is to shape not just students, but future leaders who are ready to take on the
@@ -2406,7 +2410,7 @@
                     <div class="academic-milestone">
                         <div class="milestone-badge">01</div>
                         <div class="milestone-img-wrapper">
-                            <img src="littleboy.png" alt="Pre-Primary Education">
+                            <img src="littleboy.png" alt="Pre-Primary Education" loading="lazy" decoding="async">
                             <div class="milestone-overlay"></div>
                         </div>
                         <div class="milestone-content">
@@ -2421,7 +2425,7 @@
                     <div class="academic-milestone">
                         <div class="milestone-badge">02</div>
                         <div class="milestone-img-wrapper">
-                            <img src="primary_students.1.png" alt="Primary School Education">
+                            <img src="primary_students.1.png" alt="Primary School Education" loading="lazy" decoding="async">
                             <div class="milestone-overlay"></div>
                         </div>
                         <div class="milestone-content">
@@ -2436,7 +2440,7 @@
                     <div class="academic-milestone">
                         <div class="milestone-badge">03</div>
                         <div class="milestone-img-wrapper">
-                            <img src="secondary_students.png" alt="High School Education">
+                            <img src="secondary_students.png" alt="High School Education" loading="lazy" decoding="async">
                             <div class="milestone-overlay"></div>
                         </div>
                         <div class="milestone-content">
